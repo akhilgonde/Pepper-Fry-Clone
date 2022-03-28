@@ -174,5 +174,28 @@ img{
     margin-top: 40px;
     height: 100%;
 }
+h5{
+    font-size: 2.3rem;
+    line-height: 32px;
+    font-stretch: normal;
+    font-family: 'Playfair Display',serif;
+    font-weight: bolder;
+    margin-left: 10%;
+}
+#room
+{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    color: #121212;
+    font-family: Manrope,sans-serif;
+    letter-spacing: 0;
+    gap:10px;
+}
+#room>div>img{
+    width: 100%;
+    height: 100%;
+}
 
 
