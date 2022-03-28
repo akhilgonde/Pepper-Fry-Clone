@@ -181,9 +181,11 @@ h5{
     font-family: 'Playfair Display',serif;
     font-weight: bolder;
     margin-left: 10%;
+    margin-top: 100px;
 }
-#room
+#room,#room1,#room2
 {
+    margin-bottom: 50px;
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -192,8 +194,10 @@ h5{
     font-family: Manrope,sans-serif;
     letter-spacing: 0;
     gap:10px;
+    
 }
-#room>div>img{
+#room>div>img,#room1>div>img,#room2>div>img
+{
     width: 100%;
     height: 100%;
 }
