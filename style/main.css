@@ -93,7 +93,7 @@ a{
     padding: 20px;
     height: 40px;
     margin: auto;
-    width: 80%;
+    width: 90%;
 }
 #navMain1
 {
@@ -141,21 +141,21 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap:15px;
-    width: 80%;
-    font-size: 0.913rem;
+    gap:10px;
+    width: 90%;
+    /* font-size: 0.913rem; */
     color: #121212;
-    font-weight: bold;
-
+    font-weight: 540;
     margin: auto;
     padding: 10px;
+    font-size: 1rem;
     
 }
 #gif
 {
     display: grid;
     grid-template-columns: 1fr 0.30fr;
-    width: 80%;
+    width: 90%;
     margin: auto;
     gap:20px;
 }
@@ -165,7 +165,7 @@ img{
 }
 #row
 {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 #row>img
@@ -180,7 +180,7 @@ h5{
     font-stretch: normal;
     font-family: 'Playfair Display',serif;
     font-weight: bolder;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: 100px;
 }
 #room,#room1,#room2
@@ -188,7 +188,7 @@ h5{
     margin-bottom: 50px;
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 90%;
     margin: auto;
     color: #121212;
     font-family: Manrope,sans-serif;
@@ -196,10 +196,174 @@ h5{
     gap:10px;
     
 }
-#room>div>img,#room1>div>img,#room2>div>img
+#room>div>img,#room1>div>img,#room2>div>img,#main>div>img
 {
     width: 100%;
     height: 100%;
 }
+#main
+{
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(6, 0.40fr);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    margin-top: 100px;
+    gap:10px;
+    margin: auto;
+    grid-template-areas: 
+    " a a b  b c d"
+    " a  a b b  e f";    
+}
+#main>div
+{
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+}
+.a
+{
+    grid-area: a;
+}
+.b
+{
+    grid-area: b;
+}
+.c
+{
+    grid-area: c;
+}
+.d
+{
+    grid-area: d;
+}
+.e
+{
+    grid-area: e;
+    
+}
+#Style
+{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+    box-sizing: border-box;
+    gap:10px;
+    
+}
+#Style>div>a
+{
+    text-decoration: none;
+    color: #FF7035;
+}
+#Style>div
+{
+    box-sizing: border-box;
+    width: 25%;
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+#Style>div>img
+{
+    display: block;
+    width: 100%;
+    height: 80%;
+}
+#stylemain
+{
+    background-color: #E9F1F5;
+    height: 400px;
+    box-sizing: border-box;
+    text-align: start;
+    margin-top: 0px;
 
-
+}
+#Style>div>h1
+{
+    text-align: start;
+    font-size: 2.1rem;
+    font-stretch: normal;
+    font-family: 'Playfair Display',serif;
+    font-weight: bold;
+    color: #121212;
+    
+}
+#Style>div>p,#Style>div>a
+{
+    font-size: 1.25rem;
+    letter-spacing: 0;
+    box-sizing: border-box;
+   
+}
+#Style>div:nth-child(1)
+{
+   text-align: start;
+   line-height: 30px;
+}
+#Style>div:nth-child(1)>p,#Style>div:nth-child(1)>a
+{
+    font-size: 1.7rem;
+}
+.top
+{
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+.bot
+{
+    margin-bottom: 10px;
+}
+#banner
+{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    gap:20px;
+}
+#banner>div>img
+{
+    width: 100%;
+}
+#fromStore
+{
+    background: #f6f6f4 url('https://ii1.pepperfry.com/images/hp_more_from_store_bg.jpg') no-repeat right bottom;
+    background-size: contain;
+    width: 100%;
+    margin: auto;
+}
+#fromStore>h5
+{
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+#cats
+{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-around;
+    margin-left: 70px;
+}
+#cats>div
+{
+    box-sizing: border-box; 
+    font-size: small;
+    line-height: 5px;
+    margin-left: 50px;
+    margin-top: 0px;
+}
+.top1
+{
+    margin-bottom: 20px;
+    margin-top: 130px; 
+}
+.bot1
+{
+    margin-bottom: 30px;
+}
