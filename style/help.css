@@ -1,0 +1,54 @@
+#bg{
+    background-image: url(https://ii1.pepperfry.com/media/catalog/product/s/o/800x880/solid-colour-wallpaper-by-tigris-solid-colour-wallpaper-by-tigris-jc6gbb.jpg);
+    height:369px;
+    width:100%;
+    border: 1px solid black;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+#show{
+    display: flex;
+    margin:auto;
+    width:1000px;
+    justify-content: space-around;
+}
+#show > div{
+    display: flex;
+    background-color:white;
+    margin-bottom: 50px;
+    width: 300px;
+    justify-content: space-around;
+}
+
+/* Heading */
+
+#head{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    color:white;
+    margin-bottom: 50px;
+}
+#head1{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    /* color:white; */
+    margin:50px 0px 50px 0px;
+}
+#input{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    height: 60px;
+    width: 737px;
+}
+#para{
+    display: flex;
+    justify-content: left;
+    margin:auto;
+    width: 737px;
+    color:white;
+    font-size:17px;
+}
