@@ -324,6 +324,7 @@ h5{
     width: 90%;
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 30px;
     gap:20px;
 }
 #banner>div>img
@@ -341,12 +342,13 @@ h5{
 {
     padding-top: 20px;
     margin-bottom: 20px;
+    margin-left: 10%;
 }
 #cats
 {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 80%;
     justify-content: space-around;
     margin-left: 70px;
 }
@@ -366,4 +368,5 @@ h5{
 .bot1
 {
     margin-bottom: 30px;
+    margin-top: 30px;
 }
