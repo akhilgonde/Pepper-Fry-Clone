@@ -1,0 +1,48 @@
+ body{
+    /* font-size: 1rem; */
+    /* font-weight: 600; */
+    font-family: Manrope,sans-serif;
+}
+#container{
+    display: flex;
+}
+#left{
+    width: 25%;
+}
+#right{
+    display: grid;
+    grid-template-columns: repeat(3,422px);
+}
+#viewImg{
+    width:405px;
+    height:445px;
+}
+
+#prDiv{
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -15px;
+}
+#prc{
+    color: #ff7035;
+    font-size: 17px;
+    font-weight: 900;
+    
+}
+#dsprice{
+    padding-top: 2px;
+    text-decoration: line-through;
+    color: gray;
+}
+#right>div{
+    margin-bottom: 20px;
+    line-height: 5px;
+}
+#brd{
+    font-size: 14px;
+    color: #848484;
+}
+#dsperc{
+    color: rgb(13, 172, 13);
+}

@@ -1,0 +1,27 @@
+#container{
+    display: flex;
+}
+#left{
+    width: 45%;
+    /* margin: auto; */
+}
+#flex{
+    display: flex;
+}
+#flex>div>img{
+    height: 100px;
+    width: 100px;
+}
+#image{
+    width: 785px;
+    height: 830px;
+}
+#div-image{
+    width: 785px;
+    height: 830px;
+}
+
+#right{
+    width: 45%;
+    border: 1px solid red;
+}
