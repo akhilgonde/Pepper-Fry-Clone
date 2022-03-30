@@ -337,6 +337,7 @@ h5{
     background-size: contain;
     width: 100%;
     margin: auto;
+    height: 600px;
 }
 #fromStore>h5
 {
@@ -351,11 +352,12 @@ h5{
     width: 80%;
     justify-content: space-around;
     margin-left: 70px;
+
 }
 #cats>div
 {
     box-sizing: border-box; 
-    font-size: small;
+    font-size:large;
     line-height: 5px;
     margin-left: 50px;
     margin-top: 0px;
