@@ -47,7 +47,37 @@
      <div>Modular</div>
     </div>
     <div id="gif">
-        <div><img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Promo_Web_2X_28032022_nd.jpg"></div>
+        <div><div>
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides">
+              
+              <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Promo_Web_2X_28032022_nd.jpg" style="width:100%">
+            
+            </div>
+          
+            <div class="mySlides">
+             
+              <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/HB-02_2154x1050_04032022.jpg" style="width:100%">
+              
+            </div>
+          
+            <div class="mySlides">
+           
+              <img src="https://ii3.pepperfry.com/media/wysiwyg/banners/HB-03_2154x1050_04032022.jpg" style="width:100%">
+              
+            </div>
+        
+            <div class="mySlides">
+                <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/HB-04_2154x1050_04032022.jpg" style="width:100%">
+              </div>
+          </div>
+          <div style="text-align:center" id="dot">
+            <span class="dot" onclick="Slide(1)"></span>
+            <span class="dot" onclick="Slide(2)"></span>
+            <span class="dot" onclick="Slide(3)"></span>
+            <span class="dot" onclick="Slide(4)"></span>
+          </div></div>
         <div><img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Scandinavian_RHS_02032022.gif"></div>
     </div>
     <div id="row"><img src="https://ii3.pepperfry.com/media/wysiwyg/banners/2021_web_regBanner_24032022.jpg"></div>
@@ -348,6 +378,30 @@
         </div>
     </div>
 </body>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function Slide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1};
+  if (n < 1) {slideIndex = slides.length};
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </html>
 
 
