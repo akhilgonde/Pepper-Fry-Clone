@@ -148,7 +148,7 @@ img{
     font-weight: 540;
     margin: auto;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     
 }
 #gif
@@ -194,9 +194,9 @@ h5{
     font-family: Manrope,sans-serif;
     letter-spacing: 0;
     gap:10px;
-    
+    font-size: 1.25rem;
 }
-#room>div>img,#room1>div>img,#room2>div>img,#main>div>img
+#room>div>img,#room1>div>img,#room2>div>img,#main>div>img,#review>div>img,#topB>div>img
 {
     width: 100%;
     height: 100%;
@@ -343,32 +343,96 @@ h5{
 {
     padding-top: 20px;
     margin-bottom: 20px;
-    margin-left: 10%;
+    margin-left: 6%;
 }
 #cats
 {
     display: flex;
     flex-direction: row;
     width: 80%;
-    justify-content: space-around;
-    margin-left: 70px;
+    justify-content: spa-start;
+    margin-left: 2%;
 
 }
 #cats>div
 {
     box-sizing: border-box; 
-    font-size:large;
-    line-height: 5px;
+    font-size:500;
+    line-height: 7px;
     margin-left: 50px;
-    margin-top: 0px;
 }
 .top1
 {
     margin-bottom: 20px;
-    margin-top: 130px; 
+    margin-top: 170px; 
 }
 .bot1
 {
     margin-bottom: 30px;
     margin-top: 30px;
+}
+#room1>div>h3,#room2>div>h3,#Style>div>h2
+{
+    margin-bottom: -15px;
+}
+#room1>div>p,#room2>div>p,#Style>div>p
+{
+    color: #848484;
+}
+#cats>div>p,#cats>div>div>p
+{
+    color: #121212;
+    font-size: .85rem;
+}
+#cats>div>h3,#cats>div>div>h3
+{
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #323232;
+    margin-bottom: 20px;
+}
+#review,#topB
+{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    gap:10px;
+    color: #121212;
+    font-family: Manrope,sans-serif;
+   
+}
+#review>div>img+p
+{
+    letter-spacing: 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #121212;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+}
+#review>div>:nth-child(3)
+{
+   
+    font-weight: 600;
+    color: #121212;
+    font-size: .875rem;
+ 
+}
+#review>div>:nth-child(4)
+{
+    font-size: .875rem;
+    font-weight: 500;
+    color:#848484;
+    font-size: .875rem;
+    margin-top: -10px;
+   
+}
+#top1+#room>div>img+p{
+
+    font-weight: 600;
+    color: #121212;
+    font-size: .875rem;
+
 }
