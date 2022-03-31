@@ -37,7 +37,7 @@
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #f5f5f5;
     color: #D8D8D8;
     height: 50px;
@@ -46,7 +46,19 @@
    line-height: 19px;
 }
 
-#nav11,#nav12
+#nav11
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    font-family: Manrope,sans-serif;
+    font-size: 0.9rem; 
+    font-weight: bold;
+   text-decoration: none;
+   gap:5px;
+   width: 60%;
+}
+#nav12
 {
     display: flex;
     flex-direction: row;
@@ -181,7 +193,7 @@ img{
 {
     display: block;
     position: absolute;
-    bottom:-50px;
+    bottom:-70px;
     left: 35%;      
 }
 .active, .dot:hover {
