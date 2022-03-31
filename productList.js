@@ -43,6 +43,10 @@ const appendDatabase=(data,parent)=>
         
         div.onclick=function(){
             storeData(name,image1,image2,image3,image4,price,discount_price,brand,x,discount,c)
+            window.open(
+                "./productinfopage.html",
+                '_blank' // <- This is what makes it open in a new window.
+              );
         }
 
         parent.append(div);

@@ -1,10 +1,8 @@
 let Data=JSON.parse(localStorage.getItem("indiProductDetails"));
-console.log(Data.image1);
 
 
 var count = 0;
 function carousel(Data) {
-  console.log("count:", count);
   const arrImage = [
     Data.image1,
     Data.image2,
@@ -57,15 +55,82 @@ changeImage();
 document.getElementById("image").src=Data.image1;
 document.getElementById("name").innerText=Data.name;
 document.getElementById("brand-name").innerText=`By ${Data.brand}`;
-document.getElementById("price").innerText=`₹ ${Data.discount_price} (${Data.x} % off)`;
-document.getElementById("discount").innerText=`save ₹ ${Data.discount}`;
-document.getElementById("mrp").innerText=`MRP ${Data.price} `;
+document.getElementById("price").innerText=`₹ ${Data.discount_price} `;
+document.getElementById("dsperc").innerText=` (${Data.x} % off)`
+document.getElementById("discount").innerText=`save ₹ ${Data.discount} `;
+document.getElementById("mrp").innerText=` MRP ${Data.price} `;
 document.getElementById("cashback").innerText=`Last Day to Earn Cashback ₹ ${Data.c}`
+document.getElementById("brandName").innerText=`${Data.brand}`;
+document.getElementById("weight").innerText=`${Math.floor(Math.random()*100 +15)} KG`
 
 
+let storeDataArr=JSON.parse(localStorage.getItem("cart"))||[];
+let flag=true;
+const addtoCart=()=>
+{
+  
+    storeDataArr.map(function(el)
+  {
+    if(el.name==Data.name)
+    {
+       flag=false;
+    }
+    
+  })
+  
+    if(flag)
+    {  
+    let qty=document.getElementById("qty").value;
+    Data.quantity=Number(qty);
+    storeDataArr.push(Data);
+    localStorage.setItem("cart",JSON.stringify(storeDataArr));
+    }
+
+    let addcart=document.getElementById("add");
+    addcart.innerText="GO TO CART";
+    addcart.onclick=function(){
+      window.location.href="https://www.google.com";
+    }
+}
+const gotoCart=()=>
+{
+  storeDataArr.map(function(el)
+  {
+    if(el.name==Data.name)
+    {
+       flag=false;
+    }
+    
+  })
+    if(flag)
+    {  
+    let qty=document.getElementById("qty").value;
+    Data.quantity=Number(qty);
+    storeDataArr.push(Data);
+    localStorage.setItem("cart",JSON.stringify(storeDataArr));
+    }
+  
+}
 
 
-
-
-
+const pincodeCheck=()=>
+{
+  let input=document.getElementById("input").value;
+  if(input.length==6)
+  {
+    fetch(`https://api.postalpincode.in/pincode/${input}`)
+  .then(res=>res.json())
+  .then(data=>{
+    let status=data[0].Status;
+    if(status=="Success")
+    {
+      alert("Delivery available to this pincode");
+    }
+    else{
+      alert("Sorry,Delivery not available to this pincode")
+    }
+  })
+  .catch(err=>console.log(err));
+  }
+}
 

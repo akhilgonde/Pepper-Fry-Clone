@@ -1,12 +1,19 @@
+*{
+    font-family: Manrope,sans-serif;
+}
 #container{
     display: flex;
+    justify-content: center;
 }
 #left{
     width: 45%;
     /* margin: auto; */
+    margin-right: 20px;
 }
 #flex{
     display: flex;
+    margin-top: 60px;
+    gap: 10px;
 }
 #flex>div>img{
     height: 100px;
@@ -23,5 +30,141 @@
 
 #right{
     width: 45%;
-    border: 1px solid red;
 }
+#shortinfo
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    line-height: 6px;
+    padding-left:36px;
+    
+    
+}
+#silver{
+    margin-top: -0.5px;
+    color: gray;
+}
+
+#buttons
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+
+}
+#add{
+    width: 362px;
+    height: 51px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+#buy{
+    width: 362px;
+    height: 51px;
+    background-color: #FF7035;
+    color: white;
+    border: 1px solid #FF7035;
+    font-size: 17px;
+    font-weight: 900;
+}
+#qty{
+    width: 82px;
+    height: 52px;
+    border: 1px solid black;
+    color: black;
+    font-size: 17px;
+    font-weight: 900;
+    border-radius: 4px;
+}
+#deliveryIcon{
+
+    display: flex;
+    padding-left:95px;
+    /* margin-bottom: 20px; */
+    margin-top: -20px;
+}
+#deliveryIcon>img{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+#pincode{
+    display: flex;
+    justify-content: space-between;
+    border: 0.5px solid silver;
+    width: 50%;
+    height: 40px;
+    margin:10px 0px 25px 105px;
+}
+
+#pincode>input{
+    border:none;
+    font-size: 18px;
+}
+
+#pincode>input:focus{
+  outline: none;
+}
+#pincode>input::-webkit-outer-spin-button,
+#pincode>input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#pincode>p{
+    margin: 10px 10px 0px 0px;
+    color: #FF7035;
+    text-decoration: none;
+    font-weight: 900;
+}
+#pincode>p:hover{
+    cursor: pointer;
+}
+#delivery{
+    display: flex;
+    width: 62.5%;
+    justify-content: space-between;
+    margin-bottom: -42px;
+}
+#delivery>p{
+    padding-top: 7px;
+    font-size: 13px;
+}
+#mrp{
+    text-decoration: line-through;
+}
+#price{
+    font-size: 25px;
+    font-weight: 900;
+}
+#dsperc{
+    color: rgb(13, 172, 13);
+    font-weight: 900;
+}
+#brand-name{
+    margin-top: -13px;
+    color: #FF7035;
+    font-weight: 900;
+}
+
+#month{
+    line-height: 4px;
+}
+hr{
+    height: 0.5px;
+    border-bottom: none;
+}
+#cashback{
+    height: 12px;
+}
+/* #name{
+    font-size: 20px;
+    font-weight: 550;
+} */
+
+

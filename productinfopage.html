@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Amelia 1 Seater Sofa in Charcoal Grey Colour</title>
+    <title>ProductInfo</title>
     <!--    css of productInfo.html   -->
     <link rel="stylesheet" href="productInfo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Manrope:wght@200&display=swap"
+      rel="stylesheet"
+    />
      <!--    css of footer.html   -->
-    <link rel="stylesheet" href="footerPage.css">    
-     <!--    css of aboutUs.html   -->
-    <link rel="stylesheet" href="aboutUs.css">
 </head>
 
 <!-- body-section starts here -->
 <body>
     <div id="container">
         <div id="left">
-                    <div id="div-image">
-                        <img id="image" src="" alt=""> 
+                        <div id="div-image" >
+                            <img id="image" src="" alt=""> 
                     </div>
                     <div id="flex">
                         <div id="div1" class="mouse"> </div>
@@ -30,32 +33,82 @@
         <div id="right">
             <h1 id="name"></h1>
             <h4 id="brand-name"></h4>
-            <h4>12 Months Warranty</h4>
+            <h4 id="month">12 Months' Warranty</h4>
             <span id="price"></span>
+            <span id="dsperc"></span>
             <br>
             <span id="discount"></span>
             <span id="mrp"></span>
             <span id="tax">(Inc of all taxes)</span>
+            <hr>
             <h4 id="cashback"></h4>
             <img src="./image/blabla.png" alt="">
-            <h4>DELIVERY</h4>
-            <span>Enter Pincode to get Delivery Date, Assembly Information and other details
-
-            </span>
+            <div id="delivery">
+                <h4>DELIVERY</h4>
+                <p>Enter Pincode to get Delivery Date, Assembly Information and other details</p>
+            </div>
             <br>
-            <div>
-                <input type="text" placeholder="Enter a Pincode">
-                <a href="">APPLY</a>
+            <div id="pincode">
+                <input type="number" placeholder="Enter a Pincode" id="input">
+                <p href="" onclick="pincodeCheck()">APPLY</p>
             </div>
-            <div style="display: flex;">
+            <div id="deliveryIcon">
                 <img src="https://ii1.pepperfry.com/images/icon-vip-delivery-21.png" alt="">
-                <p>Delivery charges as applicable Pincode Required</p>
+                <p>Delivery charges as applicable <b>Pincode Required</b></p>
             </div>
-            <div style="display: flex;">
+            <div  id="deliveryIcon">
                 <img src="	https://ii1.pepperfry.com/images/icon-vip-assembly-21.png" alt="">
-                <p>Assembly Charges as applicable Pincode Required</p>
+                <p>Assembly Charges as applicable <b>Pincode Required</b></p>
             </div>
-            
+
+            <div id="buttons">
+                <select name="" id="qty">
+                    <option value="1">Qty 1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button id="add" onclick="addtoCart()">ADD TO CART</button>
+                <button id="buy" onclick="gotoCart()">BUY NOW</button>
+            </div>
+
+            <div id="shortinfo">
+                <div id="leftinfo">
+                    <h4 id="silver">Brand</h4>
+                    <h4 id="brandName"></h4>
+                    <br>
+                    <h4 id="silver">Weight</h4>
+                    <h4 id="weight"></h4>
+                    <br>
+                    <h4 id="silver">Assembly</h4>
+                    <h4>Carpenter Assembly</h4>
+                    <br>
+                    <h4 id="silver">Room Type</h4>
+                    <h4>All Types Room</h4>
+                    <br>
+                    <h4 id="silver">Sku</h4>
+                    <h4>FN1967648-P-WH38149</h4>
+
+                    
+                </div>
+                <div id="rightinfo">
+
+                    <h4 id="silver">Dimensions(In Inches)</h4>
+                    <h4>H 29.9 x W 28.7 x D 39.4 (All dimensions are in inches)</h4>
+                    <br>
+                    <h4 id="silver">Warranty</h4>
+                    <h4>12 Months' Warranty</h4>
+                    <br>
+                    <h4 id="silver">Primary Material</h4>
+                    <h4>Leather</h4>
+                    <br>
+                    <h4 id="silver">Dimensions (In Centimeters)</h4>
+                    <h4>H 75.9 x W 72.9 x D 100.1</h4>
+                </div>
+                
+            </div>
             
         </div>
     </div>
@@ -72,5 +125,5 @@
   <script src="productInfo.js"></script>
 
   <!-- js file of cart  -->
-<script src="cartPage.js"></script> 
+<!-- <script src="cartPage.js"></script>  -->
     
