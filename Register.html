@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/Register.css">
+    
+</head>
+<body>
+     <div id="Register">
+         <div id="fullimg">
+             <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Web_IMG_17Dec_1X_24032022.jpg" alt="">
+         </div>
+         <div id="signin">
+             <form id="form" >
+                 <input type="text" placeholder="Name" id="name">
+                 <br>
+                 <br>
+                 <input type="text" placeholder="Number" id="number">
+           
+                 <br>
+                 <br>
+                 <input type="text" placeholder="Email ID" id="mail">
+                 <br>
+                 <br>
+                 <input type="password" name="" id="pass" placeholder="Password">
+                 <br>
+                 <br>
+                 <input type="submit" id="submit" value="REGISTER">
+                 <p id="p1tag">By registering you agree to our <a id="terms" href="">Terms & Conditions</a> </p>
+                 <br>
+                 <br>
+                
+                 <a href="" id="Login"> Exiting User? Log In</a>
+                 <div id="logo">
+                    <p id="p2tag">OR Continue with</p>
+                    <a  href="www.facebook.com" onclick="PF.SOCIAL.authenticateFacebookUser()" id="facebookWidget"><img id="facebook" src="https://ii1.pepperfry.com/images/social_login_fb_2x.png"></a>
+                    <a  href="www.google.com" id="googleWidgetReg"><img id="google" src="https://ii1.pepperfry.com/images/social_login_google_2x.png"></a>
+                 </div>
+
+            
+                
+             </form>
+         </div>
+     </div>
+</body>
+</html>
+<script>
+     document.querySelector("#form").addEventListener("submit", formSubmit);
+           var userStack=[]
+         function formSubmit(event)  {
+          event.preventDefault();
+    var name = document.querySelector("#name").value;
+    var number = document.querySelector("#number").value;
+    var mail = document.querySelector("#mail").value;
+    var pass = document.querySelector("#pass").value;
+   
+
+    var userData = {
+        Name: name,
+        Number: number, 
+        email: mail,
+        password: pass,
+      
+    };
+     userStack.push(userData);
+     console.log("userStack:", userStack);
+     localStorage.setItem("userDataBase", JSON.stringify(userStack));
+      window.location.href = "login.html";
+}
+</script>

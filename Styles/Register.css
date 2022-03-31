@@ -1,0 +1,125 @@
+body {
+    font-family: Manrope,sans-serif;
+}
+#Register {
+    display: flex;
+    width: 45%;
+    height: 500px;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    border: 1px solid rgb(204,204,204);
+    
+}
+img {
+ height: 500px;
+}
+#signin{
+    padding: 40px;
+}
+#name {
+    background: 0 0;
+border: 0;
+height: 30px;
+width: 100%;
+background-image: linear-gradient(#d8d8d8,#d8d8d8);
+background-size: 100% 2px;
+background-repeat: no-repeat;
+background-position: center bottom;
+color: #969696;
+}
+#number{
+    background: 0 0;
+border: 0;
+height: 30px;
+width: 100%;
+background-image: linear-gradient(#d8d8d8,#d8d8d8);
+background-size: 100% 2px;
+background-repeat: no-repeat;
+background-position: center bottom;
+color: #969696;
+}
+#mail {
+background: 0 0;
+border: 0;
+height: 30px;
+width: 100%;
+background-image: linear-gradient(#d8d8d8,#d8d8d8);
+background-size: 100% 2px;
+background-repeat: no-repeat;
+background-position: center bottom;
+color: #969696;
+}
+#pass{
+background: 0 0;
+border: 0;
+height: 30px;
+width: 100%;
+background-image: linear-gradient(#d8d8d8,#d8d8d8);
+background-size: 100% 2px;
+background-repeat: no-repeat;
+background-position: center bottom;
+color: #969696;
+}
+#submit {
+background-color: #e75a16;
+padding-top: 15px!important;
+padding-bottom: 15px!important;
+border-radius: 2px!important;
+border: none;
+display: block;
+outline: 0;
+width: 100%;
+margin-bottom: 10px;
+box-sizing: border-box;
+text-transform: uppercase;
+font-size: .813rem;
+color: white;
+}
+#p1tag{
+font-size: .75rem;
+line-height: 17px;
+text-align: center!important;
+color:  rgb(0,0,0);
+}
+#Login{
+border: 1px solid #d8d8d8;
+display: block;
+letter-spacing: .23px;
+padding: 10px;
+color: #f16521;
+font-size: .813rem;
+line-height: 18px;
+cursor: pointer;
+text-align: center;
+}
+#p2tag {
+font-size: .75rem;
+line-height: 17px;
+margin-right: 10px;
+text-align: center;
+color:  rgb(150,150,150);
+
+}
+#logo{
+display: flex;
+width: 65%;
+height: 5%;
+margin-top: 15px;
+margin-left: 50px;
+}
+#facebook {
+width: 30px;
+height: 30px;
+margin-top: 5px;
+
+}
+#google {
+width: 30px;
+height: 30px;
+margin-left: 10px;
+margin-top: 5px;
+}
+#terms {
+color: black;
+}
