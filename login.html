@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/login.css">
+    
+</head>
+<body>
+     <div id="login-error-msg-holder">
+         <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span> </p>
+
+     </div>
+    <div id="Register">
+        <div id="fullimg">
+             <div id="text">
+                <p id="ptag">Log In</p>
+                <h4 >You Will Be Able To Track Your Order, Use Wishlist & More.</h4>
+             </div>
+           
+          
+        </div>
+        <div id="signin">
+            <form id="form" >
+               
+                    <input type="text" placeholder="Email ID" id="mail">
+                    <br>
+                    <br>
+                    <input type="password" name="" id="pass" placeholder="Password">
+                    <br>
+                    <br>
+                    <input type="submit" id="submit" value="LOG IN">
+                    <a id="p1tag" href="">Forgot Password</a>
+              
+                    <br>
+                    <br>
+                    <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="" id="Login"> New to pepperfry? Register Here</a>
+                <div id="logo">
+                   <p id="p2tag">OR Continue with</p>
+                   <a  href="www.facebook.com" onclick="PF.SOCIAL.authenticateFacebookUser()" id="facebookWidget"><img id="facebook" src="https://ii1.pepperfry.com/images/social_login_fb_2x.png"></a>
+                   <a  href="www.google.com" id="googleWidgetReg"><img id="google" src="https://ii1.pepperfry.com/images/social_login_google_2x.png"></a>
+                </div>
+
+           
+               
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    
+    document.querySelector("form").addEventListener("submit",signin)
+    var regdUsers=JSON.parse(localStorage.getItem("userDataBase"))
+    //userdatabase is key in signuppage
+    function signin(event){
+        event.preventDefault();
+        var pass=document.querySelector("#pass").value
+        var mail=document.querySelector("#mail").value
+        const loginErrormsg = document.getElementById("login-error-msg");
+        var bag=""
+        for(var i=0;i<regdUsers.length;i++)
+        {
+        // take data of regdUser from signup page
+            if(regdUsers[i].email==mail && regdUsers[i].password==pass)
+            {  bag="yes";
+            // add home page link
+            };
+        }
+         if(bag=="yes")
+        {
+            alert("Login Successful");
+            location.reload();
+            // window.location.href="calenderhome.html";
+
+        }
+        else{
+            loginErrormsg.style.opacity = 1;
+        }
+   }
+function need(){
+    // window.location.href="signup2.html";
+}
+</script>
