@@ -674,7 +674,7 @@ const chairDatabase=()=>
             image4:"https://ii1.pepperfry.com/media/catalog/product/s/o/800x880/soli-folding-chair--set-of-2--in-teak-colour-by-dzyn-furnitures-soli-folding-chair--set-of-2--in-tea-vcrwdi.jpg",
             //:"https://ii1.pepperfry.com/media/catalog/product/s/o/800x880/soli-folding-chair--set-of-2--in-teak-colour-by-dzyn-furnitures-soli-folding-chair--set-of-2--in-tea-efewov.jpg",
             price: "19990",
-            brand: "DZYN Furnitures",
+            brand: "DZYN Furniture",
             discount: "90",
             discount_price: "19900",
         }
