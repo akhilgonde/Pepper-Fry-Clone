@@ -301,4 +301,4 @@ let footer=()=>{
 
 }
 
-export default footer
+export default footer;

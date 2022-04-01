@@ -76,10 +76,10 @@
   </body>
 </html>
 <script type="module">
-    import Database from "./sofaDatabase.js";
+    import Database from "./Database.js";
     import appendDatabase from "./productList.js";
     let x = Database();
-    x=x.sofaAndRecliners
+    x=x.bed
 
     // no sorting
     let parent = document.getElementById("right");
@@ -89,7 +89,7 @@
     document.querySelector("#res").addEventListener("click", () => {
       appendDatabase(x, parent);
       x=Database();
-      x=x.sofaAndRecliners;
+      x=x.bed;
     });
 
 
@@ -101,7 +101,7 @@
       });
       appendDatabase(x, parent);
       x=Database();
-      x=x.sofaAndRecliners
+      x=x.bed
     });
 
 
@@ -112,7 +112,7 @@
       });
       appendDatabase(x, parent);
       x=Database();
-      x=x.sofaAndRecliners
+      x=x.bed
     });
 
   let arr=["amberville","ARRA","Primos","Furnitech","Evok","Bselle","Durian","Mudramark","WoodsWorth","casaCraft","Orix","Star India","Adiko Systems" ,"Nilkamal","Mintwud"]
