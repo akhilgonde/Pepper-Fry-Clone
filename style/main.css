@@ -485,6 +485,7 @@ h5{
     font-weight:bold;
     width: auto;
     height: 20px;
+    margin-top: 5px;
     position: relative;
     clear: both;
     box-sizing: border-box;
@@ -499,7 +500,9 @@ h5{
     position: relative;
     display: inline-block;
     display: flex;
-    
+    text-align: center;
+    height: 50px;
+    margin-top: 70px;
   }
   #yes
   {
@@ -509,10 +512,11 @@ h5{
   
   .dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed;
+    overflow: hidden;
     left:0px;
-    top:20px;
-    min-width: 240px;
+    top:30px;
+    /* min-width: 240px; */
     z-index: 1;
     text-align: left;
     border-radius:20px;
