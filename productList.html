@@ -79,6 +79,7 @@
     import Database from "./sofaDatabase.js";
     import appendDatabase from "./productList.js";
     let x = Database();
+    x=x.sofaAndRecliners
 
     // no sorting
     let parent = document.getElementById("right");
@@ -88,6 +89,7 @@
     document.querySelector("#res").addEventListener("click", () => {
       appendDatabase(x, parent);
       x=Database();
+      x=x.sofaAndRecliners;
     });
 
 
@@ -99,6 +101,7 @@
       });
       appendDatabase(x, parent);
       x=Database();
+      x=x.sofaAndRecliners
     });
 
 
@@ -109,6 +112,7 @@
       });
       appendDatabase(x, parent);
       x=Database();
+      x=x.sofaAndRecliners
     });
 
   let arr=["amberville","ARRA","Primos","Furnitech","Evok","Bselle","Durian","Mudramark","WoodsWorth","casaCraft","Orix","Star India","Adiko Systems" ,"Nilkamal","Mintwud"]

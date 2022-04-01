@@ -2,11 +2,13 @@
 const appendDatabase=(data,parent)=>
 {
     parent.innerHTML=null;
+   setTimeout(() => {
     if(data.length==0)
     {
         alert("Items Not Found");
         return;
     }
+   }, 500);
     data.map(({name,image1,image2,image3,image4,price,discount_price,brand,discount})=>{
         let div = document.createElement("div");
 
