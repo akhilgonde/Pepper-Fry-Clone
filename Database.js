@@ -1,6 +1,6 @@
 const Database = () => {
   let DatabaseArray={
-     sofaAndRecliners : [
+     "sofaAndRecliners" : [
         {
           name: "Bentley 1 Seater Sofa in Brown Colour",
           subtype: "1SeaterSofa",

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/main.css">
+    <script src="index.js"></script>
 </head>
 <body>
     <div id="navbar">
@@ -609,7 +610,7 @@
     <div id="row"><img src="https://ii3.pepperfry.com/media/wysiwyg/banners/2021_web_regBanner_24032022.jpg"></div>
     <h5 class="top">Shop By Room</h5>
     <div id="room">
-        <div><img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Homepage_Rooms_Section_Web_1__2x_14032022.jpg">
+        <div id="livingRoom"><img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Homepage_Rooms_Section_Web_1__2x_14032022.jpg">
             <p>Living Room</p>
         </div>
         <div>
@@ -935,6 +936,17 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
+document.getElementById("livingRoom").addEventListener("click",()=>
+{
+    // let x={
+    //     pageName:"sofaAndRecliners",
+    // };
+   let x="sofaAndRecliners";
+    localStorage.setItem("pageInfo",(x));
+    window.location.href="productList.html";
+})
 </script>
 </html>
 

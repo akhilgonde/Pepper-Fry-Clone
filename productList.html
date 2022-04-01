@@ -79,7 +79,12 @@
     import Database from "./Database.js";
     import appendDatabase from "./productList.js";
     let x = Database();
-    x=x.bed
+    console.log(x);
+    let page=localStorage.getItem("pageInfo");
+    // let y=page;
+    x=x.page;
+    console.log(x);
+
 
     // no sorting
     let parent = document.getElementById("right");
@@ -89,7 +94,7 @@
     document.querySelector("#res").addEventListener("click", () => {
       appendDatabase(x, parent);
       x=Database();
-      x=x.bed;
+      x=x.page;
     });
 
 
@@ -101,7 +106,7 @@
       });
       appendDatabase(x, parent);
       x=Database();
-      x=x.bed
+      x=x.page;
     });
 
 
@@ -112,7 +117,7 @@
       });
       appendDatabase(x, parent);
       x=Database();
-      x=x.bed
+      x=x.page;
     });
 
   let arr=["amberville","ARRA","Primos","Furnitech","Evok","Bselle","Durian","Mudramark","WoodsWorth","casaCraft","Orix","Star India","Adiko Systems" ,"Nilkamal","Mintwud"]
