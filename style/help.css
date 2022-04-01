@@ -1,0 +1,138 @@
+body{
+    background-color: #f5f5f5;
+    font-family: 'Manrope', sans-serif;
+}
+
+#bg{
+    
+    background-image: url(https://ii1.pepperfry.com/images/need_help_sr_bg.jpg);
+    height:369px;
+    width:100%;
+
+    background-size: cover;
+}
+
+
+#show{
+    display: flex;
+    margin:auto;
+    width:72%;
+    justify-content: space-around;
+    line-height:80%;
+}
+#show > div{
+    display: flex;
+    background-color:white;
+    margin-bottom: 50px;
+    width: 280px;
+    justify-content: space-around;
+    font-size:13px;
+    font-weight:bold;
+}
+#show > div > img{
+    height:60px;
+    width: 60px;
+    padding:10px 0px 5px 0px;
+}
+
+#show > div > div >p{
+    color:rgb(65, 65, 65);
+    font-size:12px;
+}
+
+/* Heading */
+
+#head{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    color:white;
+    margin:50px 0px 50px 0px;
+    text-transform: uppercase;
+    font-family:none;
+}
+#head1{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    /* color:white; */
+    margin:50px 0px 50px 0px;
+}
+#input{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    height: 60px;
+    width: 737px;
+}
+#para{
+    display: flex;
+    justify-content: left;
+    margin:auto;
+    width: 737px;
+    color:white;
+    font-size:16px;
+}
+
+#container{
+    display:grid;
+    margin:auto;
+    width:90%;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+#container > div{
+    margin:auto;
+    background-color:white;
+    width:360px;
+    height:200px;
+    text-align:center;
+    padding-top: 50px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#container > div:hover img{
+    display:none;
+}
+#container > div:hover h4{
+    display:none;
+}
+#container > div:hover::before{
+    content:"First Login";
+}
+
+#list{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    width:90%;
+    justify-content:space-between;
+    background-color:white;
+    margin: auto;
+    gap:20px;
+    padding: 20px 0px 20px 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+#chat{
+    display:flex;
+    width:72%;
+    justify-content:space-between;
+    margin: auto;
+}
+
+#chat > div > img{
+    height:60px;
+    width:60px;
+    padding: 10px 0px 0px 10px;
+}
+#chat > div{
+    display:flex;
+    width:290px;
+    gap: 15px;
+    background-color:white;
+    font-size:14px;
+    line-height:80%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-sizing: border-box;
+}
