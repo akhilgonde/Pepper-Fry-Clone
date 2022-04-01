@@ -38,8 +38,8 @@
         #fle {
             display: inline-flex;
             flex-direction: row;
-            background-color: gray;
-            color: aliceblue;
+            /* background-color: gray; */
+            color: black;
             gap: 10px;
             width: 100%;
             border: 1px solid black;
@@ -193,7 +193,7 @@
             </div>
 
         </div>
-        <div id="right" ></div>
+        <div id="right" ><H1>Choose your payment Method</H1></div>
     </div>
 </body>
 <script>
@@ -203,7 +203,7 @@
 
     document.getElementById("right").innerHTML = "";
   
-    event.target.style.backgroundColor = 'black'; 
+    event.target.style.color = '#ff7035'; 
 
    let head = document.createElement("h5");
 
@@ -247,7 +247,7 @@ function no(event)
 {
     document.getElementById("right").innerHTML = "";
 
-    event.target.style.backgroundColor = 'black'; 
+    event.target.style.color = '#ff7035'; 
 
     
   let grid =  document.createElement("div");
@@ -272,7 +272,7 @@ function cred(event)
 
     document.getElementById("right").innerHTML = "";
   
-  event.target.style.backgroundColor = 'black'; 
+    event.target.style.color = '#ff7035'; 
 
  let head = document.createElement("h5");
 
@@ -311,14 +311,13 @@ note.innerText = "Note: You Will Be Asked To Enter Your credit Card Details On P
 
  
 }
-
 
 function int(event)
 {
 
     document.getElementById("right").innerHTML = "";
   
-  event.target.style.backgroundColor = 'black'; 
+    event.target.style.color = '#ff7035'; 
 
  let head = document.createElement("h5");
 
@@ -356,69 +355,6 @@ note.innerText = "Note: You Will Be Asked To Enter Your credit Card Details On P
    document.getElementById("right").append(head,grid,button,note);
 
 }
-// const btn2 = document.getElementById('btn2');
-
-// btn2.addEventListener('click', function onClick(event) {
- 
-//   document.body.style.backgroundColor = 'black';
- 
-// });
-
-// const btn3 = document.getElementById('btn3');
-
-// btn3.addEventListener('click', function onClick(event) {
- 
-//   document.body.style.backgroundColor = 'black';
- 
-// });
-
-// const btn4 = document.getElementById('btn4');
-
-// btn4.addEventListener('click', function onClick(event) {
- 
-//   document.body.style.backgroundColor = 'black';
- 
-// });
-
-// const btn5 = document.getElementById('btn5');
-
-// btn5.addEventListener('click', function onClick(event) {
- 
-//   document.body.style.backgroundColor = 'black';
- 
-// });
-
-// const btn6 = document.getElementById('btn6');
-
-// btn6.addEventListener('click', function onClick(event) {
- 
-//   document.body.style.backgroundColor = 'black';
- 
-// });
-
-// const btn7 = document.getElementById('btn7');
-
-// btn7.addEventListener('click', function onClick(event) {
- 
-//   document.body.style.backgroundColor = 'black';
- 
-// });
-
-// const btn8 = document.getElementById('btn8');
-
-// btn8.addEventListener('click', function onClick(event) {
- 
-//   document.body.style.backgroundColor = 'black';
- 
-// });
-
-// const btn9 = document.getElementById('btn9');
-
-// btn9.addEventListener('click', function onClick(event) {
- 
-//   document.body.style.backgroundColor = 'black';
- 
-// });
 
 </script>
 
