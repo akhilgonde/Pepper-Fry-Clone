@@ -1,0 +1,80 @@
+ body{
+    /* font-size: 1rem; */
+    /* font-weight: 600; */
+    font-family: Manrope,sans-serif;
+}
+#container{
+    display: flex;
+}
+
+#right{
+    display: grid;
+    grid-template-columns: repeat(3,422px);
+    margin-left: 26%;
+
+}
+#viewImg{
+    width:405px;
+    height:445px;
+}
+
+#prDiv{
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -15px;
+}
+#prc{
+    color: #ff7035;
+    font-size: 17px;
+    font-weight: 900;
+    
+}
+#dsprice{
+    padding-top: 2px;
+    text-decoration: line-through;
+    color: gray;
+}
+#right>div{
+    margin-bottom: 20px;
+    line-height: 5px;
+}
+#brd{
+    font-size: 14px;
+    color: #848484;
+}
+#dsperc{
+    color: rgb(13, 172, 13);
+}
+
+#left{
+    margin-top:-10px;
+    width: 25%;
+    padding-left: 100px;
+    box-sizing: border-box;
+    line-height: 30px;
+    border-right: 0.25px solid rgb(182, 172, 172);
+    margin-right: 10px;
+    text-shadow: 0.25px 0.25px #080808;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position:fixed;
+
+    background-color: white;
+}
+#hrhorizontal{
+color: gray;
+opacity: 50%;
+}
+.onhoverColor:hover{
+    cursor: pointer;
+    color: #ff7035;
+}
+
+#brandSort{
+    overflow: scroll;
+    height: 330px;
+    overflow-x: hidden;
+}
+
+
