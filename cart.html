@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/899371d0a4.js" crossorigin="anonymous"></script>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./cart.css">
+</head>
+
+<body>   
+    <div class="navbar">
+        <div class="logo">
+            <a href=""> 
+                <!-- homepage link -->
+                <img src="https://ii1.pepperfry.com/images/svg/pf-logo-21.svg" alt="no load"></a>
+        </div>
+        <div class="mid-nav">
+            <div class="cart-logo">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div><span id="cart2" class="material-icons-outlined">  shopping_cart  </span></div>
+                <div><span id="cart3" class="material-icons-outlined">  shopping_cart  </span></div>            
+            </div>           
+            <div class="cart-bottom">
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <a href="">Cart</a> <a href="">------ Delivery & Billing Address</a> <a href=""> ------ Payment</a>
+            </div> 
+                         
+        </div>
+        <div id="notification">
+            <div >WELCOME <strong><span id="user-name"></span>!</strong></div>
+        </div> 
+        
+        
+    </div>
+    <hr class="hr">
+    <div id="in_cart">
+        <h3 style="font-weight:normal">IN YOUR CART.    .<span id="cartlength"></span>
+        </h3> 
+
+    </div>
+    
+    <div id="container">           
+        
+        <div id="box1">
+            <div id="pin">Enter Your Pincode For Delivery & Assembly Information
+                <input type="number" name="" id="pincode" placeholder="Pincode">
+                <button id="gobtn" onclick="mycheck()">GO</button>
+            </div>
+            <div id="dis"></div>
+        </div>
+        <div id="box2">
+            <div>
+                
+                <p>Apply Coupon</p>
+            </div>
+            <div>
+                <div class="value">
+                    <div>
+                        <p>Cart value</p>
+                        <p id="cart_value">
+                        </p>
+                    </div>
+                    <div>
+                        <p style="color:green">Retail Discount</p>
+                        <p style="color:green" id="retail_discount">
+                        </p>
+                    </div>
+                    <div>
+                        <p>Delivery (FREE)</p>
+                        <p>₹&nbsp; 0
+                        </p>
+                    </div>
+                    <!-- <div id="ass">
+                        <p>Assembly</p>
+                        <p>₹&nbsp; 449
+                        </p>
+                    </div> -->
+                    <div id="gi">
+                        <p>GiveIndia</p>
+                        <p>₹&nbsp; 99
+                        </p>
+                    </div>
+
+                    <p>Delivery Charges Extra. Enter Pincode To Know</p>
+
+                </div>
+                <hr>
+                <div class="value">
+                    <div>
+                        <h4>Total</h4>
+                        <h4 id="total">
+                        </h4>
+                    </div>
+                    <h5>
+                        (inclusive of all taxes)
+
+                    </h5>
+                </div>
+                <hr>
+                <div class="value">
+                    <p>No Cost EMI Available Starting <u>₹ 8,100/month.</u> EMI Starting <u>₹ 2,288/month</u></p>
+                </div>
+
+            </div>
+
+            <div id="last">
+                <input type="checkbox" id="myCheck" name="checkbox" onclick="myFunction()">
+                <label style="color: darkgray; font-weight: bold; font-size: 12px;" for="">Contribute Rs.99 For COVID
+                    Relief Through GiveIndia.</label>
+
+                <br>
+
+                <input type="checkbox" id="" name="checkbox">
+                <label style="color: darkgray; font-weight: bold; font-size: 12px;" for="">Use GSTIN For Business
+                    Purchase (Optional)</label>
+                <br>
+                <a href="checkout.html"><button id="place_order" onclick="goto()">PLACE ORDER</button></a>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <img src="https://i.ibb.co/0r2X3Ct/Capture.png" alt="">
+    </div>
+    </div>
+</body>
+</html>
+<script src="./bedData.js"></script>;
+<script src="./cart.js"></script>;
+
+
