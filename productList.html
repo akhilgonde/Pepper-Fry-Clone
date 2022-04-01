@@ -15,18 +15,257 @@
   </head>
   <body>
     <div id="container">
-      <div id="left"></div>
+      <div id="left">
+        <div id="sortBy">
+          <h4>Sort by</h4>
+          <span class="onhoverColor" id="res">Relevance</span><br />
+          <span id="sortH2L" class="onhoverColor">Highest Priced First</span
+          ><br />
+          <span id="sortL2H" class="onhoverColor">Lowest Priced First</span
+          ><br />
+        </div>
+        <hr id="hrhorizontal" />
+
+        <div id="brandSort">
+          <h4>Brand</h4>
+          <span class="onhoverColor" id="amberville">Amberville</span><br />
+          <span class="onhoverColor" id="Mudramark">Mudramark</span><br />
+          <span class="onhoverColor" id="WoodsWorth">Woodsworth</span><br />
+          <span class="onhoverColor" id="casaCraft">CasaCraft</span><br />
+          <span class="onhoverColor" id="Orix">Orix</span><br />
+          <span class="onhoverColor" id="Star India">Star India</span><br />
+          <span class="onhoverColor" id="Nilkamal">Nilkamal</span><br />
+          <span class="onhoverColor" id="Adiko Systems">Adiko Systems</span
+          ><br />
+          <span class="onhoverColor" id="Mintwud">Mintwud</span><br />
+          <span class="onhoverColor" id="Durian">Durian</span><br />
+          <span class="onhoverColor" id="Bselle">Bselle</span><br />
+          <span class="onhoverColor" id="ARRA">ARRA</span><br />
+          <span class="onhoverColor" id="Primos">Primos</span><br />
+          <span class="onhoverColor" id="Furnitech">Furnitech</span><br />
+          <span class="onhoverColor" id="Evok">Evok</span><br />
+        </div>
+        <hr id="hrhorizontal" />
+
+        <div id="priceSort">
+          <h4>Price</h4>
+          <span class="onhoverColor" id="9999"
+            >Under ₹ 10,000</span
+          ><br />
+         <span class="onhoverColor" id="10000"
+            >₹ 10,000 to ₹ 20,000</span
+          ><br />
+          <span class="onhoverColor" id="20001"
+            >Over ₹ 20,000</span
+          ><br />
+        </div>
+        <hr id="hrhorizontal" />
+
+        <div id="discountSort">
+          <h4>Discount</h4>
+          <span class="onhoverColor"id="10">10% and Above</span><br/>
+          <span class="onhoverColor"id="20">20% and Above</span><br/>
+          <span class="onhoverColor"id="30">30% and Above</span><br/>
+          <span class="onhoverColor"id="40">40% and Above</span><br/>
+          <span class="onhoverColor"id="50">50% and Above</span><br/>
+          <span class="onhoverColor"id="60">60% and Above</span><br/>
+        </div>
+      </div>
       <div id="right"></div>
     </div>
   </body>
 </html>
 <script type="module">
-  import Database from "./sofaDatabase.js";
-  import appendDatabase from "./productList.js";
-  let x = Database();
+    import Database from "./sofaDatabase.js";
+    import appendDatabase from "./productList.js";
+    let x = Database();
 
-  let parent = document.getElementById("right");
-  appendDatabase(x, parent);
+    // no sorting
+    let parent = document.getElementById("right");
+    appendDatabase(x, parent);
+
+
+    document.querySelector("#res").addEventListener("click", () => {
+      appendDatabase(x, parent);
+      x=Database();
+    });
+
+
+
+  // sorting ascending by price.
+    document.querySelector("#sortL2H").addEventListener("click", () => {
+       x.sort(function (a, b) {
+        return Number(a.discount_price) - Number(b.discount_price);
+      });
+      appendDatabase(x, parent);
+      x=Database();
+    });
+
+
+    // sorting decscending by price.
+    document.querySelector("#sortH2L").addEventListener("click", () => {
+       x.sort(function (a, b) {
+        return Number(b.discount_price) - Number(a.discount_price);
+      });
+      appendDatabase(x, parent);
+      x=Database();
+    });
+
+  let arr=["amberville","ARRA","Primos","Furnitech","Evok","Bselle","Durian","Mudramark","WoodsWorth","casaCraft","Orix","Star India","Adiko Systems" ,"Nilkamal","Mintwud"]
+  let flag=false;
+  for(let i=0;i<arr.length;i++)
+  {
+    let brandsShort=document.getElementById(arr[i]);
+    brandsShort.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(elem.brand===brandsShort.innerText)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+      flag=true;
+    })
+    if(flag){
+      break;
+    }
+  }
   
+
+ 
+    let brandsShort=document.getElementById("9999");
+    brandsShort.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)<10000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+
+    })
+  
+    let brandsShort1=document.getElementById("10000");
+    brandsShort1.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>10000 && Number(elem.discount_price)<20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+
+    let brandsShort2=document.getElementById("20001");
+    brandsShort2.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+  
+    let discountSort=document.getElementById("10");
+    discountSort.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+   
+    let discountSort1=document.getElementById("20");
+    discountSort1.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+    let discountSort2=document.getElementById("30");
+    discountSort2.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+    let discountSort3=document.getElementById("40");
+    discountSort3.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+    let discountSort4=document.getElementById("50");
+    discountSort4.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        let n=document.getElementById("dsperc").innerText;
+        if(Number(n)>50)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+    let discountSort5=document.getElementById("60");
+    discountSort5.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
 
 </script>

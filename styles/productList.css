@@ -6,12 +6,12 @@
 #container{
     display: flex;
 }
-#left{
-    width: 25%;
-}
+
 #right{
     display: grid;
     grid-template-columns: repeat(3,422px);
+    margin-left: 26%;
+
 }
 #viewImg{
     width:405px;
@@ -46,3 +46,35 @@
 #dsperc{
     color: rgb(13, 172, 13);
 }
+
+#left{
+    margin-top:-10px;
+    width: 25%;
+    padding-left: 100px;
+    box-sizing: border-box;
+    line-height: 30px;
+    border-right: 0.25px solid rgb(182, 172, 172);
+    margin-right: 10px;
+    text-shadow: 0.25px 0.25px #080808;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position:fixed;
+
+    background-color: white;
+}
+#hrhorizontal{
+color: gray;
+opacity: 50%;
+}
+.onhoverColor:hover{
+    cursor: pointer;
+    color: #ff7035;
+}
+
+#brandSort{
+    overflow: scroll;
+    height: 330px;
+    overflow-x: hidden;
+}
+
+

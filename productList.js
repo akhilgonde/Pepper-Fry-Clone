@@ -1,5 +1,12 @@
+
 const appendDatabase=(data,parent)=>
 {
+    parent.innerHTML=null;
+    if(data.length==0)
+    {
+        alert("Items Not Found");
+        return;
+    }
     data.map(({name,image1,image2,image3,image4,price,discount_price,brand,discount})=>{
         let div = document.createElement("div");
 
@@ -28,7 +35,7 @@ const appendDatabase=(data,parent)=>
         brd.innerText=brand;
 
         let dsperc=document.createElement("h4");
-        let x=Math.floor(Math.random()*25 +30)
+        let x=Math.floor(Math.random()*25 +30);
         dsperc.innerText=`${x}% off`;
         dsperc.setAttribute("id","dsperc");
 
@@ -72,4 +79,7 @@ const storeData=(name,image1,image2,image3,image4,price,discount_price,brand,x,d
     }
     localStorage.setItem("indiProductDetails",JSON.stringify(obj))
 }
+
+
+
 export default appendDatabase;
