@@ -148,12 +148,15 @@
 
     if(screen.width>1281)
     {
+        let head = document.getElementsByTagName('HEAD')[0];
         let link=document.createElement("link");
         link.rel = 'stylesheet';
 	
 		link.type = 'text/css';
 	
 		link.href = "./smallscreenstyle/style.css";
+
+        head.appendChild(link);
     }
 </script>
 <!-- js file of product info -->
