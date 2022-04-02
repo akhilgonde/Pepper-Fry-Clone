@@ -14,8 +14,7 @@ function get_username() {
 }
 // display cart.length
 let cartlength = document.getElementById("cartlength");
-cartlength.innerText = "1";
-
+cartlength.innerText = cart.length;
 //total_value = total_value + price;
 var cart_value = 0;
 
@@ -27,21 +26,40 @@ var total = 0;
 //pincode check
 function mycheck() {
   let inp = document.getElementById("pincode").value;
-  if (inp.length != 6) {
-    alert`please fill a valid pincode`;
+  if(inp.length==6)
+  {
+    fetch(`https://api.postalpincode.in/pincode/${inp}`)
+  .then(res=>res.json())
+  .then(data=>{
+    let status=data[0].Status;
+    if(status=="Success")
+    {
+      alert("Delivery available to this pincode");
+    }
+    else{
+      alert("Sorry,Delivery not available to this pincode")
+    }
+  })
+  .catch(err=>console.log(err));
+  }
+  else{
+    alert("please Enter a correct pincode");
   }
 }
 
 let div1 = document.getElementById("dis");
 let discount = Number(cart[0].discount);
 cart.forEach(function (el, i) {
-  var count = 1;
+  var count = cart[0].quantity;
   console.log(el);
 
+  discount=count*discount;
   cart_value += Number(el.price);
+   cart_value=cart_value*count;
   total_discount += Number(el.discount);
+  total_discount=count*total_discount;
   total += Number(el.discount_price);
-  console.log(cart_value, total_discount, total);
+  total=count*total;
 
   let item = document.createElement("div");
   item.setAttribute("class", "item");
