@@ -354,25 +354,8 @@
 
     </div>
 </body>
-<script type="module">
-
-   import {header,dropDownNav} from "./components/header.js";
-
-   let navbar = document.getElementById("navbar");
-
-    navbar.innerHTML = header();
-
-let dropDownNav1 = document.getElementById("dropDownNavbar");
-
-dropDownNav1.innerHTML = dropDownNav();
-
-import footer from "./components/footer.js";
-
-let footerIndex = document.getElementById("footerIndex");
-
-footerIndex.innerHTML = footer();
-
-    let slideIndex = 1;
+<script>
+  let slideIndex = 1;
 showSlides(slideIndex);
 
 function Slide(n) {
@@ -394,6 +377,27 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+</script>
+
+<script type="module">
+
+   import {header,dropDownNav} from "./components/header.js";
+
+   let navbar = document.getElementById("navbar");
+
+    navbar.innerHTML = header();
+
+let dropDownNav1 = document.getElementById("dropDownNavbar");
+
+dropDownNav1.innerHTML = dropDownNav();
+
+import footer from "./components/footer.js";
+
+let footerIndex = document.getElementById("footerIndex");
+
+footerIndex.innerHTML = footer();
+
+  
 
 
 document.getElementById("livingRoom").addEventListener("click",()=>
@@ -401,8 +405,8 @@ document.getElementById("livingRoom").addEventListener("click",()=>
     // let x={
     //     pageName:"sofaAndRecliners",
     // };
-   let x="sofaAndRecliners";
-    localStorage.setItem("pageInfo",(x));
+   let x= "sofaAndRecliners";
+    localStorage.setItem("pageInfo",x);
     window.location.href="productList.html";
 })
 </script>
