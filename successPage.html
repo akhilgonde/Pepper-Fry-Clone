@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        #success {
+            width:60VW;
+            height:70VH;
+            margin: auto; 
+        }
+        img{
+            width:100%;
+        }
+        .green{
+            color:green; 
+        }
+        #backtomain{
+            margin-top: 100px;
+           text-align: center;
+           font-size: 2VW;
+        }
+    </style>
+</head>
+<body>
+    <div id="success">
+       <img src="https://classicaliqtest.com/wp-content/uploads/2020/04/add.png" alt="">
+    </div>
+    <div id="backtomain">
+       You will be redirected to the main page in <span class="green">few seconds</span> seconds
+    </div>
+
+</body>
+</html>
+<script>
+ function backtomain()
+    {
+       setTimeout(function (){
+
+        // alert("You")
+        window.location.href="index.html"
+
+       },3000)
+        
+    }
+
+    backtomain();
+</script>

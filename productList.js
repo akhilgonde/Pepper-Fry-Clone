@@ -32,7 +32,7 @@ const appendDatabase=(data,parent)=>
         dsprice.setAttribute("id","dsprice");
         dsprice.innerText=`₹${price}`;
         
-        let  brd=document.createElement("h5");
+        let  brd=document.createElement("h6");
         brd.setAttribute("id","brd");
         brd.innerText=brand;
 

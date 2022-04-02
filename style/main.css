@@ -495,6 +495,13 @@ h5{
     cursor: pointer;
     /* color: #8ec038; */
   }
+
+  #navbar{
+    height: auto;
+  }
+  #dropDownNavbar{
+      margin-top: 50px;
+  }
   
   .dropdown {
     position: relative;
@@ -502,7 +509,7 @@ h5{
     display: flex;
     text-align: center;
     height: 50px;
-    margin-top: 70px;
+    margin-top: 20px;
   }
   #yes
   {

@@ -25,7 +25,7 @@ const header = () =>
            <div><img src="https://ii1.pepperfry.com/images/svg/icon-wishlist-21.svg"></div>
            <div><img src="https://ii1.pepperfry.com/images/svg/icon-cart-21.svg"></div>
        </div>
-       `
+    </div>`
 }
 
 const dropDownNav = () =>
