@@ -108,7 +108,7 @@ footerIndex.innerHTML = footer();
     import Database from "./Database.js";
     import appendDatabase from "./productList.js";
     let x = Database();
-
+    console.log(x); 
     let page=localStorage.getItem("pageInfo");
     // let y=page;
     if(page=="sofaAndRecliners")
@@ -147,6 +147,7 @@ footerIndex.innerHTML = footer();
     document.querySelector("#res").addEventListener("click", () => {
       appendDatabase(x, parent);
       x=Database();
+     
       if(page=="sofaAndRecliners")
       {
         x=x.sofaAndRecliners;
@@ -403,6 +404,48 @@ footerIndex.innerHTML = footer();
       appendDatabase(data, parent);
      
     })
+
+    document.getElementById("S&R").addEventListener("click",()=>
+{
+   let x= "sofaAndRecliners";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+document.getElementById("Mchairs").addEventListener("click",()=>
+{
+   let x= "Chairs";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+document.getElementById("Mbed").addEventListener("click",()=>
+{
+   let x= "bed";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+document.getElementById("Mdining").addEventListener("click",()=>
+{
+   let x= "dining";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+document.getElementById("S&R1").addEventListener("click",()=>
+{
+   let x= "sofaAndRecliners";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+document.getElementById("Mbed1").addEventListener("click",()=>
+{
+   let x= "bed";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
     if(screen.width==1280)
     {
         let x=document.getElementById("bodyT");

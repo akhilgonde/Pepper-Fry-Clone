@@ -3,13 +3,13 @@ const footer = () => {
     <div class="col_wrap">
       <h6 class="footerh6">Useful Links</h6>
       <div>
-        <a href="">About Us</a>
+        <a href="about.html">About Us</a>
       </div>
       <div>
         <a href="" target="_blank">Our Blog</a>
       </div>
       <div>
-        <a href="">Careers</a>
+        <a href="career.html">Careers</a>
       </div>
       <div>
         <a href="">Corporate Governance</a>
