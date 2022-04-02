@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="footer1.css">
     
 </head>
-<body>
+<body id="bodyT">
     <div id="navbar">
         <!-- header imported from "./components/header.js" -->
          </div>
@@ -51,7 +51,7 @@
          </div>
      </div>
      
-    <div id="footerIndex">
+    <div id="footer">
 
     </div>
 </body>
@@ -93,7 +93,13 @@ let navbar = document.getElementById("navbar");
 
 import footer from "./components/footer.js";
 
-let footerIndex = document.getElementById("footerIndex");
+let footerIndex = document.getElementById("footer");
 
 footerIndex.innerHTML = footer();
+if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
+
+    }
 </script>

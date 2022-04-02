@@ -259,3 +259,11 @@ let Checkout_Data = {
   Total: total,
 };
 localStorage.setItem("Checkout_Data", JSON.stringify(Checkout_Data));
+
+
+if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
+
+    }

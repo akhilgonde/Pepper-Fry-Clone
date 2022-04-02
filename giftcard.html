@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="giftcard.css">
     <link rel="stylesheet" href="footer1.css">
   </head>
-  <body>
+  <body id="bodyT">
     <div>
       <div>
         <h2>SELECT FROM THE GIFT CARD OPTIONS BELOW, SPREAD THE JOY</h2>
@@ -102,4 +102,10 @@
 import footer from "./footer1.js";
   let footer1 = document.getElementById("footer2");
   footer1.innerHTML = footer();
+  if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
+
+    }
 </script>

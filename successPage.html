@@ -24,7 +24,7 @@
         }
     </style>
 </head>
-<body>
+<body id="bodyT">
     <div id="success">
        <img src="https://classicaliqtest.com/wp-content/uploads/2020/04/add.png" alt="">
     </div>
@@ -47,4 +47,10 @@
     }
 
     backtomain();
+    if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
+
+    }
 </script>

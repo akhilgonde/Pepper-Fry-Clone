@@ -228,7 +228,7 @@ input {
 }
 </style>
 </head>
-<body>
+<body id="bodyT">
     <div id="left">
         <h2 style="color: #ff7035;text-align: center;">Checkout</h2>
         <div>
@@ -316,4 +316,10 @@ input {
         event.preventDefault();
         window.location.href="payment.html";
     })
+    if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
+
+    }
 </script>

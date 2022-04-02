@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProductInfo</title>
     <!--    css of productInfo.html   -->
+    <!-- <link rel="stylesheet" href="productInfo.css"> -->
     <link rel="stylesheet" href="productInfo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +20,7 @@
 </head>
 
 <!-- body-section starts here -->
-<body>
+<body id="bodyT">
     <div id="navbar">
         <!-- header imported from "./components/header.js" -->
      </div>
@@ -146,17 +147,11 @@
 
     footerIndex.innerHTML = footer();
 
-    if(screen.width>=1280)
+    if(screen.width==1280)
     {
-        let head = document.getElementsByTagName('HEAD')[0];
-        let link=document.createElement("link");
-        link.rel = 'stylesheet';
-	
-		link.type = 'text/css';
-	
-		link.href = "./smallscreenstyle/style.css";
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
 
-        head.appendChild(link);
     }
 </script>
 <!-- js file of product info -->

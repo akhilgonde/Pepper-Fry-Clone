@@ -148,7 +148,7 @@
       } 
     </style> -->
   </head>
-  <body>
+  <body id="bodyT">
     <div class="container">
       <img
         src=" https://ii1.pepperfry.com/media/wysiwyg/banners/career_page_banner.jpg"
@@ -317,4 +317,10 @@
   import footer from "./footer1.js";
   let footer1 = document.getElementById("footer2");
   footer1.innerHTML = footer();
+  if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
+
+    }
 </script>

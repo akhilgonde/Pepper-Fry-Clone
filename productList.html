@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="footer.css">
   </head>
-  <body class="zoom">
+  <body id="bodyT">
     <div id="navbar">
       <!-- header imported from "./components/header.js" -->
    </div>
@@ -403,5 +403,10 @@ footerIndex.innerHTML = footer();
       appendDatabase(data, parent);
      
     })
+    if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
 
+    }
 </script>

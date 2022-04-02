@@ -114,7 +114,7 @@
 
 </head>
 
-<body>
+<body id="bodyT">
     <h1 style="text-align: center;color: #ff7035;">Payment Page</h1>
     <div id="paymentMain">
        
@@ -369,7 +369,12 @@ note.innerText = "Note: You Will Be Asked To Enter Your credit Card Details On P
    document.getElementById("right").append(head,grid,button,note);
 
 }
+if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
 
+    }
 </script>
 
 </html>

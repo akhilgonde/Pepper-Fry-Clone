@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
     <title>Help</title>
 </head>
-<body>
+<body id="bodyT">
     <div id="bg">
         <h1 id="head">How Can We Help?</h1>
         <div id="show">
@@ -129,3 +129,12 @@
 </html>
 
 <!--                    -     -->
+
+<script>
+    if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
+
+    }
+</script>

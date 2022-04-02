@@ -36,7 +36,7 @@
     }
     </style>
   </head>
-  <body>
+  <body id="bodyT">
     <div id="container">
       <div id="navbar">
         <h3>MY WISHLIST</h3>
@@ -50,3 +50,11 @@
     </div>
   </body>
 </html>
+<script>
+  if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
+
+    }
+</script>
