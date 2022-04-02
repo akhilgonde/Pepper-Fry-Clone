@@ -6,9 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Styles/login.css">
+    <link rel="stylesheet" href="footer1.css">
+
     
 </head>
 <body>
+    <div id="navbar">
+        <!-- header imported from "./components/header.js" -->
+         </div>
+     
+         <!-- <div id="dropDownNavbar">
+        dropnavbar inported from "./components/header.js"
+     </div> -->
      <div id="login-error-msg-holder">
          <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span> </p>
 
@@ -54,6 +63,9 @@
             </form>
         </div>
     </div>
+    <div id="footerIndex">
+
+    </div>
 </body>
 </html>
 <script>
@@ -90,3 +102,23 @@ function need(){
     // window.location.href="signup2.html";
 }
 </script>
+<script type="module">
+
+    import {header,dropDownNav} from "./components/header.js";
+    console.log(header, dropDownNav);
+ 
+    let navbar = document.getElementById("navbar");
+ 
+     navbar.innerHTML = header();
+ 
+//  let dropDownNav1 = document.getElementById("dropDownNavbar");
+ 
+//  dropDownNav1.innerHTML = dropDownNav();
+ 
+ import footer from "./components/footer.js";
+ 
+ let footerIndex = document.getElementById("footerIndex");
+ 
+ footerIndex.innerHTML = footer();
+
+ </script>

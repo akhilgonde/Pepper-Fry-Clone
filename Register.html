@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Styles/Register.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="footer1.css">
     
 </head>
 <body>
+    <div id="navbar">
+        <!-- header imported from "./components/header.js" -->
+         </div>
      <div id="Register">
          <div id="fullimg">
              <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Web_IMG_17Dec_1X_24032022.jpg" alt="">
@@ -45,6 +50,10 @@
              </form>
          </div>
      </div>
+     
+    <div id="footerIndex">
+
+    </div>
 </body>
 </html>
 <script>
@@ -70,4 +79,21 @@
      localStorage.setItem("userDataBase", JSON.stringify(userStack));
       window.location.href = "login.html";
 }
+</script>
+<script type="module">
+     import {header,dropDownNav} from "./components/header.js";
+
+let navbar = document.getElementById("navbar");
+
+ navbar.innerHTML = header();
+
+// let dropDownNav1 = document.getElementById("dropDownNavbar");
+
+// dropDownNav1.innerHTML = dropDownNav();
+
+import footer from "./components/footer.js";
+
+let footerIndex = document.getElementById("footerIndex");
+
+footerIndex.innerHTML = footer();
 </script>
