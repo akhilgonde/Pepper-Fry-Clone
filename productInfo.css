@@ -1,9 +1,10 @@
 *{
     font-family: Manrope,sans-serif;
 }
-#container{
+#container1{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 #left{
     width: 45%;
@@ -166,5 +167,7 @@ hr{
     font-size: 20px;
     font-weight: 550;
 } */
-
+#offimg{
+    height:100px;
+}
 

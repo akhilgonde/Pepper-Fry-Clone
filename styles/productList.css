@@ -3,6 +3,14 @@
     /* font-weight: 600; */
     font-family: Manrope,sans-serif;
 }
+@media only screen and (min-width: 350px) and (max-width:1250px) {
+    #right{
+        display: grid;
+        grid-template-columns: repeat(2,422px);
+        padding-bottom: 20px;
+       
+    } 
+ }
 #container1{
     display: flex;
     height: 1080px;
@@ -87,3 +95,21 @@ opacity: 50%;
     overflow-x: hidden;
 }
 
+@media only screen and (min-width: 1126px) and (max-width:1250px) {
+    #right{
+        display: grid;
+        grid-template-columns: repeat(2,350px);
+        gap:100px;
+        justify-content:space-between;
+        box-sizing: border-box;
+       
+    } 
+ }
+ @media only screen and (min-width:50px) and (max-width:1125px) {
+    #right{
+        display: grid;
+        grid-template-columns: repeat(2,200px);
+        width: 1125px;
+        box-sizing: border-box;
+    } 
+ }
