@@ -89,7 +89,7 @@ const addtoCart=()=>
     let addcart=document.getElementById("add");
     addcart.innerText="GO TO CART";
     addcart.onclick=function(){
-      window.location.href="https://www.google.com";
+      window.location.href="cart.html";
     }
 }
 const gotoCart=()=>
