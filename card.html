@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <link rel="stylesheet" href="./card.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="left-side">
+        <div class="nav-logo">
+          <div>
+            <span class="material-icons-outlined"></span>&nbsp;
+            <p onclick="back_page()" >Back</p>
+          </div>
+        </div>
+        <p class="title">Enter new card</p>
+        <div>
+          <p>Total Payable Amount <span id="getTotal">₹</span></p>
+        </div>
+        <div><p class="tId">Transaction Id: 307554246</p></div>
+      </div>
+      <div class="mid-hr"></div>
+      <div class="right-side">
+        <p>Cards (Credit/Debit)</p>
+        <div class="form">
+          <label for="">New Card</label><br /><br />
+          <input
+            id="input-card-num"
+            type="text"
+            placeholder="Enter Card Number"
+            onfocusout="function_alert('card-num', 'input-card-num')"
+          /><br />
+          <span id="card-num">Please Enter card Number</span><br />
+          <div class="mid-two">
+            <div>
+              <label for="">Expiry</label><br /><br />
+              <input
+                id="input-date"
+                type="text"
+                placeholder="MM/YY"
+                onfocusout="function_alert('date', 'input-date')"
+              /><br />
+              <span id="date">Please Enter Expiry date</span><br />
+            </div>
+            <div>
+              <label for="">CVV</label><br /><br />
+              <input
+                id="input-cvv"
+                type="text"
+                placeholder="Enter CVV"
+                onfocusout="function_alert('cvv', 'input-cvv')"
+              /><br />
+              <span id="cvv">Please Enter CVV</span><br />
+            </div>
+          </div>
+          <label for="">Name on Card</label><br /><br />
+          <input type="text" placeholder="Enter Name as on card" /><br /><br />
+          <div class="check">
+            <input type="checkbox" />&nbsp;&nbsp; Save this option securely for
+            faster payment
+          </div>
+          <button onclick="go_to()">PROCEED</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <img src="https://i.ibb.co/BNHzRfx/Capture.png" alt="" srcset="" />
+    </div>
+  </body>
+</html>
+<script>
+    let back_page =() =>{
+        window.location.href = "./cart.html"
+
+    }
+  function function_alert(id, input) {
+    let check = document.getElementById(input);
+
+    let tem = document.getElementById(id);
+
+    if (check.value.length == 0) {
+      // console.log('tem:', tem)
+      tem.style.display = "block";
+      check.style.border = "1px solid red";
+    } else {
+      tem.style.display = "none";
+      check.style.border = "1px solid #8e8e8e";
+    }
+  }
+
+  function go_to() {
+    alert("Thank you..!!");
+  }
+
+  get_total();
+
+  function get_total() {
+    let total_val = document.getElementById("getTotal");
+  }
+</script>
