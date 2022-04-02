@@ -206,14 +206,20 @@ body {
     grid-template-columns: 1fr 1fr;
   }
   
-  #box2 > div:nth-child(1) {
+  #p{
     display: flex;
     width: 100%;
-    height: 10%;
+    height: 40px;
     align-items: center;
     color: grey;
     border: 1px solid lightgray;
+
   }
+  #blabla>input::-webkit-outer-spin-button,
+  #blabla>input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
   
   #box2 > div:nth-child(1) img {
     height: 80%;

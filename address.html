@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  background-color: #fffdf7;
+  font-family: Favoritfreshly, sans-serif;
+}
+
+
+#left {
+  width: 60%;
+  /* border: 1px dashed red; */
+  padding-left: 30px;
+  /* padding-right: 30px; */
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+#left > div {
+  /* border: 1px solid green; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: auto;
+  width: 100%;
+  background-color: #ffffff;
+  margin-bottom: 70px;
+}
+#delhead {
+  padding: 30px 0px 0px 60px;
+}
+#form {
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-template-rows: repeat(16, 30px);
+  font-family: Favoritfreshly, sans-serif;
+  padding-bottom: 30px;
+
+  grid-template-areas:
+    "a a b b"
+    "c c d d"
+    "e e e e"
+    "f f f f"
+    "g g g g"
+    "h h h h"
+    "i i i i"
+    "j j j j"
+    "k m m o"
+    "l n n p"
+    "q q q q"
+    "r r r r"
+    "s s s s"
+    "t t t t"
+    "u u u u"
+    "v v v v";
+}
+#firstname {
+  grid-area: a;
+}
+#lastname {
+  grid-area: b;
+}
+#ifirstname {
+  grid-area: c;
+}
+#ilastname {
+  grid-area: d;
+}
+#fullname {
+  grid-area: e;
+}
+#ifullname {
+  grid-area: f;
+}
+#addLine1 {
+  grid-area: g;
+}
+#iaddLine1 {
+  grid-area: h;
+}
+#addLine2 {
+  grid-area: i;
+}
+#iaddLine2 {
+  grid-area: j;
+}
+#state {
+  grid-area: k;
+}
+#istate {
+  grid-area: l;
+  height: 40px;
+  border-width: thin;
+  /* border-radius: 4px; */
+}
+#pin {
+  grid-area: m;
+}
+#ipin {
+  grid-area: n;
+}
+#city {
+  grid-area: o;
+}
+#icity {
+  grid-area: p;
+}
+#phone {
+  grid-area: q;
+}
+#iphone {
+  grid-area: r;
+}
+#emeil {
+  grid-area: s;
+}
+#iemeil {
+  grid-area: t;
+}
+#fortotal {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: space-between;
+  height: 70px;
+  grid-area: u;
+  font-weight: bold;
+  font-size: 19px;
+  /* padding-bottom: 20px; */
+}
+
+#submit {
+  margin-top: 20px;
+  height: 38px;
+  border: 0px;
+  font-size: 17px;
+  background-color: rgb(49, 103, 255);
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.5px;
+  grid-area: v;
+  /* padding-bottom: 30px; */
+  /* border-radius: 0px; */
+}
+#submit:hover {
+  transform: translate(2px, -2px);
+}
+#form > p {
+  font-size: 13px;
+  margin-bottom: -20px;
+  font-weight: bold;
+  /* letter-spacing: 0.5px; */
+}
+input {
+  height: 35px;
+  /* border-width: thin; */
+  /* border-radius: 4px; */
+}
+#right {
+  width: 40%;
+  /* border: 1px dashed red; */
+  /* padding-left: 40px; */
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+#right > div {
+  /* border: 1px solid green; */
+  height: auto;
+  width: 100%;
+  background-color: #ffffff;
+  margin: auto;
+  padding-bottom: 40px;
+  margin-top: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.promot {
+  width: 100%;
+  padding-top: 30px;
+  /* border: 1px solid black; */
+  display: flex;
+
+  justify-content: space-around;
+}
+.promot > input {
+  width: 70%;
+}
+.promot > input + input {
+  width: 20%;
+  height: 40px;
+  border: 0px;
+  font-size: 17px;
+  background-color: rgb(49, 103, 255);
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.5px;
+}
+.promot > input + input:hover {
+  transform: translate(2px, -2px);
+}
+
+#right > div > div {
+  /* border: 1px solid red; */
+  width: 96%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  font-weight: bold;
+  margin-top: 20px;
+  border-bottom: rgb(158, 158, 158) 1px solid;
+}
+.promot ~ div > p:first-child {
+  font-weight: 100;
+}
+#datesel {
+  border: 0px;
+  font-size: x-large;
+  justify-content: end;
+}
+
+#right > div > div:first-child {
+  border-bottom: none;
+}
+</style>
+</head>
+<body>
+    <div id="left">
+        <h2 style="color: #ff7035;text-align: center;">Checkout</h2>
+        <div>
+            <h3 id="delhead">Delivery Address</h3>
+            <form id="form">
+                <p id="firstname">First Name</p>
+                <p id="lastname">Last Name</p>
+                <br>
+                <input id="ifirstname" type="text">
+                <input id="ilastname" type="text">
+                <p id="fullname">Full Name for Delivery Address</p>
+                <input id="ifullname" type="text">
+                <p id="addLine1">Address Line 1</p>
+                <input id="iaddLine1" type="text">
+                <p id="addLine2">Address Line 2 (Optional)</p>
+                <input id="iaddLine2" type="text">
+                <p id="state">State</p>
+                <select id="istate" class="form-control">
+                    <option value="0">Select State </option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+                <p id="pin">Pin</p>
+                <input id="ipin" type="text">
+                <p id="city">City</p>
+                <input id="icity" type="text">
+                <p id="phone">Phone</p>
+                <input id="iphone" type="text">
+                <p id="emeil"> Email (We require your email to send you receipts and order updates)</p>
+                <input type="email" id="iemeil">
+                <div id="fortotal">
+                    <h2>Total</h2>
+                    <h2 id="gettotal"></h2>
+                </div>
+                <input id="submit" type="submit" value="Next">
+
+
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+ let checkOutData=JSON.parse(localStorage.getItem("Checkout_Data"))||0;
+   document.getElementById("gettotal").innerText=checkOutData.Total;
+
+
+    document.getElementById("submit").addEventListener("submit",(event)=>
+    {
+        event.preventDefault();
+        window.location.href="payment.html";
+    })
+</script>

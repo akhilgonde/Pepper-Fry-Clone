@@ -79,11 +79,35 @@
     import Database from "./Database.js";
     import appendDatabase from "./productList.js";
     let x = Database();
-    console.log(x);
+
     let page=localStorage.getItem("pageInfo");
     // let y=page;
-    x=x.page;
-    console.log(x);
+    if(page=="sofaAndRecliners")
+    {
+      x=x.sofaAndRecliners;
+    }
+    else if(page=="Chairs")
+    {
+     
+      x=x.Chairs;
+    }
+    else if(page=="bed")
+    {
+      x=x.bed;
+    }
+    else if(page=="dining")
+    {
+      x=x.dining;
+    }
+    else if(page=="figurines")
+    {
+      x=x.figurines;
+    }
+    else if(page=="WallArt")
+    {
+      x=x.WallArt;
+
+    }
 
 
     // no sorting
@@ -94,8 +118,32 @@
     document.querySelector("#res").addEventListener("click", () => {
       appendDatabase(x, parent);
       x=Database();
-      x=x.page;
-    });
+      if(page=="sofaAndRecliners")
+      {
+        x=x.sofaAndRecliners;
+      }
+      else if(page=="Chairs")
+      {
+      
+        x=x.Chairs;
+      }
+      else if(page=="bed")
+      {
+        x=x.bed;
+      }
+      else if(page=="dining")
+      {
+        x=x.dining;
+      }
+      else if(page="figurines")
+      {
+        x=x.figurines;
+      }
+      else if(page=="Wall_Art")
+      {
+        x=x.Wall_Art;
+      }
+      });
 
 
 
@@ -106,7 +154,32 @@
       });
       appendDatabase(x, parent);
       x=Database();
-      x=x.page;
+     
+      if(page=="sofaAndRecliners")
+      {
+        x=x.sofaAndRecliners;
+      }
+      else if(page=="Chairs")
+      {
+      
+        x=x.Chairs;
+      }
+      else if(page=="bed")
+      {
+        x=x.bed;
+      }
+      else if(page=="dining")
+      {
+        x=x.dining;
+      }
+      else if(page="figurines")
+      {
+        x=x.figurines;
+      }
+      else if(page=="Wall_Art")
+      {
+        x=x.Wall_Art;
+      }
     });
 
 
@@ -117,7 +190,32 @@
       });
       appendDatabase(x, parent);
       x=Database();
-      x=x.page;
+      
+      if(page=="sofaAndRecliners")
+      {
+        x=x.sofaAndRecliners;
+      }
+      else if(page=="Chairs")
+      {
+      
+        x=x.Chairs;
+      }
+      else if(page=="bed")
+      {
+        x=x.bed;
+      }
+      else if(page=="dining")
+      {
+        x=x.dining;
+      }
+      else if(page="figurines")
+      {
+        x=x.figurines;
+      }
+      else if(page=="Wall_Art")
+      {
+        x=x.Wall_Art;
+      }
     });
 
   let arr=["amberville","ARRA","Primos","Furnitech","Evok","Bselle","Durian","Mudramark","WoodsWorth","casaCraft","Orix","Star India","Adiko Systems" ,"Nilkamal","Mintwud"]

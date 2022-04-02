@@ -1,4 +1,4 @@
-var cart = JSON.parse(localStorage.getItem("cartdata")) || [];
+var cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // Display username
 get_username();
@@ -33,14 +33,14 @@ function mycheck() {
 }
 
 let div1 = document.getElementById("dis");
-let discount = cart[0].discount;
+let discount = Number(cart[0].discount);
 cart.forEach(function (el, i) {
   var count = 1;
   console.log(el);
 
-  cart_value += el.price;
-  total_discount += el.discount;
-  total += el.discount_price;
+  cart_value += Number(el.price);
+  total_discount += Number(el.discount);
+  total += Number(el.discount_price);
   console.log(cart_value, total_discount, total);
 
   let item = document.createElement("div");
@@ -58,7 +58,7 @@ cart.forEach(function (el, i) {
   let div1B1 = document.createElement("div");
   div1B1.innerText = `${el.name} - ${el.brand}`;
   let div1B2 = document.createElement("div");
-  div1B2.innerText = "36 Month's Warranty, 100% Genuine";
+  div1B2.innerText = "12 Month's Warranty, 100% Genuine";
   div1B2.style.color = "#f16521";
   let div1B3 = document.createElement("div");
   div1B3.innerText = `Delivery by 8th April.`;
@@ -83,11 +83,11 @@ cart.forEach(function (el, i) {
     }
     div1C2.innerText = count;
 
-    discount_price.innerText = `₹ ${count * el.discount_price}`;
-    price.innerText = `₹ ${count * el.price}`;
-    total -= el.discount_price;
-    cart_value -= el.price;
-    discount -= el.discount;
+    discount_price.innerText = `₹ ${count * Number(el.discount_price)}`;
+    price.innerText = `₹ ${count * Number(el.price)}`;
+    total -= Number(el.discount_price);
+    cart_value -= Number(el.price);
+    discount -= Number(el.discount);
     console.log("cart_value :>> ", cart_value);
     console.log("discount :>> ", discount);
     document.getElementById("cart_value").innerText = `₹ ${cart_value}`;
@@ -111,11 +111,11 @@ cart.forEach(function (el, i) {
     count++;
 
     div1C2.innerText = count;
-    discount_price.innerText = `₹ ${count * el.discount_price}`;
-    price.innerText = `₹ ${count * el.price}`;
-    total += el.discount_price;
-    cart_value += el.price;
-    discount += el.discount;
+    discount_price.innerText = `₹ ${count * Number(el.discount_price)}`;
+    price.innerText = `₹ ${count * Number(el.price)}`;
+    total += Number(el.discount_price);
+    cart_value += Number(el.price);
+    discount += Number(el.discount);
     console.log("cart_value :>> ", cart_value);
     console.log("discount :>> ", discount);
 
@@ -138,12 +138,12 @@ cart.forEach(function (el, i) {
   div1C2.className = "countBox";
 
   let price = document.createElement("div");
-  price.innerText = `₹ ${el.price}`;
+  price.innerText = `₹ ${Number(el.price)}`;
   price.style.color = "grey";
   price.style.textDecoration = "line-through";
 
   let discount_price = document.createElement("div");
-  discount_price.innerText = `₹ ${el.discount_price}`;
+  discount_price.innerText = `₹ ${Number(el.discount_price)}`;
   discount_price.style.color = "#f16521";
   discount_price.style.fontWeight = 700;
 
@@ -166,9 +166,9 @@ cart.forEach(function (el, i) {
     el.qty = 0;
     delItemsFromCart(i);
 
-    total -= el.discount_price;
-    cart_value -= el.price;
-    discount -= el.discount;
+    total -= Number(el.discount_price);
+    cart_value -= Number(el.price);
+    discount -= Number(el.discount);
     console.log("cart_value :>> ", cart_value);
     console.log("discount :>> ", discount);
 
@@ -211,9 +211,9 @@ cart.forEach(function (el, i) {
 });
 function delItemsFromCart(i) {
   cart.splice(i, 1);
-  localStorage.setItem("cartdata", JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
-localStorage.setItem("cartdata", JSON.stringify(cart));
+localStorage.setItem("cart", JSON.stringify(cart));
 
 document.getElementById("cart_value").innerText = `₹ ${cart_value}`;
 document.getElementById("retail_discount").innerText = `(-)₹ ${discount}`;
@@ -224,10 +224,11 @@ div.style.display = "none";
 function myFunction() {
   var checkBox = document.getElementById("myCheck");
   var div = document.getElementById("gi");
-  if (checkBox.checked == true) {
+  if (checkBox.checked == true && cart.length>0) {
     div.style.display = "flex";
     document.getElementById("total").innerText = `₹ ${total + 99}`;
-  } else {
+  } else if(cart.length>0)
+  {
     div.style.display = "none";
     document.getElementById("total").innerText = `₹ ${total - 99}`;
   }

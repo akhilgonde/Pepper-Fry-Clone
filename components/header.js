@@ -23,7 +23,7 @@ const header = () =>
            <div><img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg"></div>
            <div><img src="https://ii1.pepperfry.com/images/svg/icon-profile-21.svg"></div>
            <div><img src="https://ii1.pepperfry.com/images/svg/icon-wishlist-21.svg"></div>
-           <div><img src="	https://ii1.pepperfry.com/images/svg/icon-cart-21.svg"></div>
+           <div><img src="https://ii1.pepperfry.com/images/svg/icon-cart-21.svg"></div>
        </div>
        `
 }

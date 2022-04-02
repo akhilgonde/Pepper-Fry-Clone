@@ -9,12 +9,16 @@
 
     <style>
         #paymentMain {
+            
             width: 50%;
             height: auto;
             /* border: 1px solid red; */
             margin-left: 100px;
             display: flex;
             border: 0.5px solid gray;
+            justify-content: center;
+            margin: auto;
+            margin-top: 50px;
         }
 
         #paymentMain>div:nth-child(1) {
@@ -111,6 +115,7 @@
 </head>
 
 <body>
+    <h1 style="text-align: center;color: #ff7035;">Payment Page</h1>
     <div id="paymentMain">
        
         <div id="left">
@@ -212,7 +217,7 @@
 
    let head = document.createElement("h5");
 
-   head.innerText = "CHOOSE YOUR DEBIT CARD TYPE";
+   head.innerText = "WE ACCEPT";
 
   let grid =  document.createElement("div");
 
@@ -236,6 +241,10 @@
   grid.append(grid1,grid2,grid3,grid4);
 
   let button = document.createElement("button");
+  button.addEventListener("click",()=>
+  {
+      window.location.href="card.html";
+  })
   button.innerText = "PROCEED TO PAY";
 
   let note = document.createElement("p");
