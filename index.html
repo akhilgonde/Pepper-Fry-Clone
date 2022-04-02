@@ -507,16 +507,25 @@ document.getElementById("S&R1").addEventListener("click",()=>
     window.location.href="productList.html";
 })
 
-document.getElementById("Mbed1").addEventListener("click",()=>
+document.getElementById("MBed1").addEventListener("click",()=>
 {
    let x= "bed";
     localStorage.setItem("pageInfo",x);
     window.location.href="productList.html";
 })
 
-document.getElementById("search").addEventListener("",()=>{
-    console.log("keypress");
+let input=document.getElementById("search");
+input.addEventListener("keypress",()=>{
+  searchData(event);
 })
+
+const searchData=(e)=>
+{
+   if(e.keyCode ==13)
+   {
+       inp=input.value;   
+   }
+}
 if(screen.width==1280)
     {
         let x=document.getElementById("bodyT");
