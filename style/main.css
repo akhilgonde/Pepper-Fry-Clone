@@ -130,6 +130,9 @@ a{
     font-family: Manrope,sans-serif;
     font-size: 1.1rem; 
 }
+#search:focus{
+outline: none;
+}
 
 img{
     height: 100%;
@@ -493,6 +496,18 @@ h5{
   .droph3:hover {
     border: none;
     cursor: pointer;
+    color: #FF7035;
+    transition: 0.3s;
+
+    /* color: #8ec038; */
+  }
+
+  .dropdown-content>div>p:hover {
+    border: none;
+    cursor: pointer;
+    color: #FF7035;
+    transition: 0.3s;
+    
     /* color: #8ec038; */
   }
 

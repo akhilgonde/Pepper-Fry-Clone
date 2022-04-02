@@ -2,7 +2,7 @@ const header = () =>
 {
     return `<div id="disc">
     <div>Shubh Aarambh Sale | Up to 60% Off | Use Code <span id="shubh">SHUBH</span></div> 
-    <div>Extra 20% Cashback On All Orders |T&amp;C Apply</span> <a href="#" ><span id="tc">SignUp</span></a></div>  
+    <div>Extra 20% Cashback On All Orders |T&amp;C Apply</span> <a href="Register.html" ><span id="tc">SignUp</span></a></div>  
    </div>
    <div id="nav1">
        <div id="nav11">
@@ -12,18 +12,17 @@ const header = () =>
            <div><a href="https://www.pepperfry.com/studio-pepperfry.html">Find a Studio</a></div>
        </div>
        <div id="nav12">
-           <div id="pin">Enter Pincode</div>
-           <div><span id="tc">Find Pepperfry studio</span></div>
+           <div><a href="https://www.pepperfry.com/studio-pepperfry-lucknow-gomti-nagar.html"><span id="tc">Find Pepperfry studio</span></a></div>
        </div>
    </div>
    <div id="navMain">
        <div><img src="https://ii1.pepperfry.com/images/svg/pf-logo-21.svg"></div>
        <div id="input"><input id="search" placeholder="Your door to happiness opens with a search" type="text"></div>
        <div id="navMain1">
-           <div><img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg"></div>
-           <div><img src="https://ii1.pepperfry.com/images/svg/icon-profile-21.svg"></div>
-           <div><img src="https://ii1.pepperfry.com/images/svg/icon-wishlist-21.svg"></div>
-           <div><img src="https://ii1.pepperfry.com/images/svg/icon-cart-21.svg"></div>
+           <div><a href="help.html"><img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg"></a></div>
+           <div><a href="Register.html"><img src="https://ii1.pepperfry.com/images/svg/icon-profile-21.svg"></a></div>
+           <div><a href="wishlist.html"><img src="https://ii1.pepperfry.com/images/svg/icon-wishlist-21.svg"></a></div>
+           <div><a href="cart.html"><img src="https://ii1.pepperfry.com/images/svg/icon-cart-21.svg"></a></div>
        </div>
     </div>`
 }
@@ -36,13 +35,13 @@ const dropDownNav = () =>
             <h5 class="droph3">Furniture </h5>
             <div class="dropdown-content">
                 <div>
-                    <p>Sofas and Recliners</p>
+                    <p id="S&R">Sofas and Recliners</p>
                     <p>Seating</p>
-                    <p>Chairs</p>
-                    <p>Beds</p>
-                    <p>Cabinetrys</p>
+                    <p id="Mchairs">Chairs</p>
+                    <p id="Mbed">Beds</p>
+                    <p >Cabinetrys</p>
                     <p>Tables</p>
-                    <p>Dining</p>
+                    <p id="Mdining">Dining</p>
                     <p>Kids and Teens</p>
                     <p>Home Office </p>
                     <p>Entertainment Units</p>
@@ -93,7 +92,7 @@ const dropDownNav = () =>
         </div>
 
         <div class="dropdown">
-            <h5 class="droph3"> Sofas & Recliners</h5>
+            <h5 class="droph3" id="S&R1"> Sofas & Recliners</h5>
             <div class="dropdown-content">
                 <div>
                     <p> 3 Seater Sofas</p>
@@ -216,7 +215,7 @@ const dropDownNav = () =>
 
 
         <div class="dropdown">
-            <h5 class="droph3"> Beds</h5>
+            <h5 class="droph3" id="MBed1"> Beds</h5>
             <div class="dropdown-content">
                 <div>
                     <p>Queen Size Beds</p>
