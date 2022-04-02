@@ -145,6 +145,16 @@
     let footerIndex = document.getElementById("footer");
 
     footerIndex.innerHTML = footer();
+
+    if(screen.width>1281)
+    {
+        let link=document.createElement("link");
+        link.rel = 'stylesheet';
+	
+		link.type = 'text/css';
+	
+		link.href = "./smallscreenstyle/style.css";
+    }
 </script>
 <!-- js file of product info -->
   <script src="productInfo.js"></script>

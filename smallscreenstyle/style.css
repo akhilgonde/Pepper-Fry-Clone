@@ -1,7 +1,11 @@
- body{
+body{
     /* font-size: 1rem; */
     /* font-weight: 600; */
     font-family: Manrope,sans-serif;
+}
+.zoom {
+    zoom: 0.75; /* all browsers */
+   -moz-transform: scale(0.75); /* Firefox */
 }
 
 #container1{
