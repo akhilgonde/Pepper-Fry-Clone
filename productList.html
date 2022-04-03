@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="./styles/productList.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Manrope:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <!-- <script src="index.js" type="module"></script> -->
+
+    <script src="./index.js" type="module"></script>
+  </head>
+  <body id="bodyT">
+    <div id="navbar">
+      <!-- header imported from "./components/header.js" -->
+   </div>
+
+   <div id="dropDownNavbar">
+    <!-- dropnavbar inported from "./components/header.js" -->
+ </div>
+    <div style="color: red;text-align: center;"><h4>When you Refresh the page then search data will removed from localStorage</h4></div>
+    <div id="container1">
+      <div id="left">
+        <div id="sortBy">
+          <h4>Sort by</h4>
+          <span class="onhoverColor" id="res">Relevance</span><br />
+          <span id="sortH2L" class="onhoverColor">Highest Priced First</span
+          ><br />
+          <span id="sortL2H" class="onhoverColor">Lowest Priced First</span
+          ><br />
+        </div>
+        <hr id="hrhorizontal" />
+
+        <div id="brandSort">
+          <h4>Brand</h4>
+          <span class="onhoverColor" id="amberville">Amberville</span><br />
+          <span class="onhoverColor" id="Mudramark">Mudramark</span><br />
+          <span class="onhoverColor" id="WoodsWorth">Woodsworth</span><br />
+          <span class="onhoverColor" id="casaCraft">CasaCraft</span><br />
+          <span class="onhoverColor" id="Orix">Orix</span><br />
+          <span class="onhoverColor" id="Star India">Star India</span><br />
+          <span class="onhoverColor" id="Nilkamal">Nilkamal</span><br />
+          <span class="onhoverColor" id="Adiko Systems">Adiko Systems</span
+          ><br />
+          <span class="onhoverColor" id="Mintwud">Mintwud</span><br />
+          <span class="onhoverColor" id="Durian">Durian</span><br />
+          <span class="onhoverColor" id="Bselle">Bselle</span><br />
+          <span class="onhoverColor" id="ARRA">ARRA</span><br />
+          <span class="onhoverColor" id="Primos">Primos</span><br />
+          <span class="onhoverColor" id="Furnitech">Furnitech</span><br />
+          <span class="onhoverColor" id="Evok">Evok</span><br />
+        </div>
+        <hr id="hrhorizontal" />
+
+        <div id="priceSort">
+          <h4>Price</h4>
+          <span class="onhoverColor" id="9999"
+            >Under ₹ 10,000</span
+          ><br />
+         <span class="onhoverColor" id="10000"
+            >₹ 10,000 to ₹ 20,000</span
+          ><br />
+          <span class="onhoverColor" id="20001"
+            >Over ₹ 20,000</span
+          ><br />
+        </div>
+        <hr id="hrhorizontal" />
+
+        <div id="discountSort">
+          <h4>Discount</h4>
+          <span class="onhoverColor"id="10">10% and Above</span><br/>
+          <span class="onhoverColor"id="20">20% and Above</span><br/>
+          <span class="onhoverColor"id="30">30% and Above</span><br/>
+          <span class="onhoverColor"id="40">40% and Above</span><br/>
+          <span class="onhoverColor"id="50">50% and Above</span><br/>
+          <span class="onhoverColor"id="60">60% and Above</span><br/>
+        </div>
+      </div>
+      <div id="right"></div>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>
+<script type="module">
+
+import {header,dropDownNav} from "./components/header.js";
+
+let navbar = document.getElementById("navbar");
+
+ navbar.innerHTML = header();
+
+let dropDownNav1 = document.getElementById("dropDownNavbar");
+
+dropDownNav1.innerHTML = dropDownNav();
+
+import footer from "./components/footer.js";
+
+let footerIndex = document.getElementById("footer");
+
+footerIndex.innerHTML = footer();
+
+import WholeDB from "./components/WholeDB.js";
+let wholeData=WholeDB();
+
+    import Database from "./Database.js";
+    import appendDatabase from "./productList.js";
+    let x = Database();
+    console.log(x); 
+    let page=localStorage.getItem("pageInfo");
+    // let y=page;
+    let parent = document.getElementById("right");
+  let searchArr=JSON.parse(localStorage.getItem("searchArr"))||[];
+  
+if(searchArr.length>0 && searchArr!=undefined)
+{
+  appendDatabase(searchArr,parent);
+  localStorage.removeItem("searchArr");
+}
+else{
+  if(page=="sofaAndRecliners")
+    {
+      x=x.sofaAndRecliners;
+    }
+    else if(page=="Chairs")
+    {
+     
+      x=x.Chairs;
+    }
+    else if(page=="bed")
+    {
+      x=x.bed;
+    }
+    else if(page=="dining")
+    {
+      x=x.dining;
+    }
+    else if(page=="figurines")
+    {
+      x=x.figurines;
+    }
+    else if(page=="WallArt")
+    {
+      x=x.WallArt;
+
+    }
+
+     // no sorting
+   
+     appendDatabase(x, parent);
+}
+  
+
+
+   
+
+
+    document.querySelector("#res").addEventListener("click", () => {
+      appendDatabase(x, parent);
+      x=Database();
+     
+      if(page=="sofaAndRecliners")
+      {
+        x=x.sofaAndRecliners;
+      }
+      else if(page=="Chairs")
+      {
+      
+        x=x.Chairs;
+      }
+      else if(page=="bed")
+      {
+        x=x.bed;
+      }
+      else if(page=="dining")
+      {
+        x=x.dining;
+      }
+      else if(page="figurines")
+      {
+        x=x.figurines;
+      }
+      else if(page=="Wall_Art")
+      {
+        x=x.Wall_Art;
+      }
+      });
+
+
+
+  // sorting ascending by price.
+    document.querySelector("#sortL2H").addEventListener("click", () => {
+       x.sort(function (a, b) {
+        return Number(a.discount_price) - Number(b.discount_price);
+      });
+      appendDatabase(x, parent);
+      x=Database();
+     
+      if(page=="sofaAndRecliners")
+      {
+        x=x.sofaAndRecliners;
+      }
+      else if(page=="Chairs")
+      {
+      
+        x=x.Chairs;
+      }
+      else if(page=="bed")
+      {
+        x=x.bed;
+      }
+      else if(page=="dining")
+      {
+        x=x.dining;
+      }
+      else if(page="figurines")
+      {
+        x=x.figurines;
+      }
+      else if(page=="Wall_Art")
+      {
+        x=x.Wall_Art;
+      }
+    });
+
+
+    // sorting decscending by price.
+    document.querySelector("#sortH2L").addEventListener("click", () => {
+       x.sort(function (a, b) {
+        return Number(b.discount_price) - Number(a.discount_price);
+      });
+      appendDatabase(x, parent);
+      x=Database();
+      
+      if(page=="sofaAndRecliners")
+      {
+        x=x.sofaAndRecliners;
+      }
+      else if(page=="Chairs")
+      {
+      
+        x=x.Chairs;
+      }
+      else if(page=="bed")
+      {
+        x=x.bed;
+      }
+      else if(page=="dining")
+      {
+        x=x.dining;
+      }
+      else if(page="figurines")
+      {
+        x=x.figurines;
+      }
+      else if(page=="Wall_Art")
+      {
+        x=x.Wall_Art;
+      }
+    });
+
+  let arr=["amberville","ARRA","Primos","Furnitech","Evok","Bselle","Durian","Mudramark","WoodsWorth","casaCraft","Orix","Star India","Adiko Systems" ,"Nilkamal","Mintwud"]
+  let flag=false;
+  for(let i=0;i<arr.length;i++)
+  {
+    let brandsShort=document.getElementById(arr[i]);
+    brandsShort.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(elem.brand===brandsShort.innerText)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+      flag=true;
+    })
+    if(flag){
+      break;
+    }
+  }
+  
+
+ 
+    let brandsShort=document.getElementById("9999");
+    brandsShort.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)<10000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+
+    })
+  
+    let brandsShort1=document.getElementById("10000");
+    brandsShort1.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>10000 && Number(elem.discount_price)<20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+
+    let brandsShort2=document.getElementById("20001");
+    brandsShort2.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+  
+    let discountSort=document.getElementById("10");
+    discountSort.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+   
+    let discountSort1=document.getElementById("20");
+    discountSort1.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+    let discountSort2=document.getElementById("30");
+    discountSort2.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+    let discountSort3=document.getElementById("40");
+    discountSort3.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+    let discountSort4=document.getElementById("50");
+    discountSort4.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        let n=document.getElementById("dsperc").innerText;
+        if(Number(n)>50)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+    let discountSort5=document.getElementById("60");
+    discountSort5.addEventListener("click",()=>
+    {
+      let data=[];
+      x.filter(function(elem,index)
+      {
+        if(Number(elem.discount_price)>20000)
+        {
+          data.push(elem);
+        }
+      })
+      appendDatabase(data, parent);
+     
+    })
+ 
+
+    document.getElementById("S&R").addEventListener("click",()=>
+{
+   let x= "sofaAndRecliners";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+document.getElementById("Mchairs").addEventListener("click",()=>
+{
+   let x= "Chairs";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+document.getElementById("Mbed").addEventListener("click",()=>
+{
+   let x= "bed";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+document.getElementById("Mdining").addEventListener("click",()=>
+{
+   let x= "dining";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+document.getElementById("S&R1").addEventListener("click",()=>
+{
+   let x= "sofaAndRecliners";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+document.getElementById("MBed1").addEventListener("click",()=>
+{
+   let x= "bed";
+    localStorage.setItem("pageInfo",x);
+    window.location.href="productList.html";
+})
+
+let input=document.getElementById("search");
+input.addEventListener("keypress",()=>{
+  searchData(event);
+})
+const searchData=(e)=>
+{
+    if(e.keyCode==13)
+   {
+       let inp=input.value;
+        var filterData=wholeData.filter(function(item){
+            return item.name.includes(inp);
+        })
+        localStorage.setItem("searchArr",JSON.stringify(filterData));
+        // appendDatabase(filterData,"right");
+        window.location.href="productList.html";
+   }
+  
+}
+
+    if(screen.width==1280)
+    {
+        let x=document.getElementById("bodyT");
+        x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
+
+    }
+</script>
