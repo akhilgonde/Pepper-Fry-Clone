@@ -17,7 +17,7 @@ const header = () =>
    </div>
    <div id="navMain">
        <div><a href="index.html"><img src="https://ii1.pepperfry.com/images/svg/pf-logo-21.svg"></a></div>
-       <div id="input"><input id="search" placeholder="Your door to happiness opens with a search" type="text"></div>
+       <div id="input"><input id="search" placeholder="Your door to happiness opens with a search (by Name)" type="text"></div>
        <div id="navMain1">
            <div><a href="help.html"><img src="https://ii1.pepperfry.com/images/svg/web21-header-help-icon.svg"></a></div>
            <div><a href="Register.html"><img src="https://ii1.pepperfry.com/images/svg/icon-profile-21.svg"></a></div>

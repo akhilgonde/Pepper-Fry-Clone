@@ -314,6 +314,11 @@ grid.append(grid1,grid2,grid3,grid4);
 
 let button = document.createElement("button");
 button.innerText = "PROCEED TO PAY";
+button.addEventListener("click",()=>
+  {
+      window.location.href="card.html";
+  })
+
 
 let note = document.createElement("p");
 note.style.textAlign = "center";
