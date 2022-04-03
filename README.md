@@ -1,5 +1,6 @@
-# Pepper-Fry-Clone
-#collaborative
+# Project :
+## Pepper-Fry-Clone
+# Collaborator :
 This is a collaborative Project from Masai School in the Construct Week by FW-16 batch students. We are six members of the team:
 1. Abusalem
 2. Akhil
@@ -8,26 +9,29 @@ This is a collaborative Project from Masai School in the Construct Week by FW-16
 5. Harshada
 6. Rupesh
 
-#info
+# info :
 In this blog, I am going to tell how I and my team members cloned this Pepperfry website in 6 days.
 
 Firstly let’s know about Pepperfry. It is an Indian online marketplace for furniture and home décor. The company was formed by Ex-eBay executives Ambareesh Murty and Ashish Shah. They started Pepperfry in Mumbai in 2012. The company is headquartered in Mumbai, Maharashtra, and operates as a subsidiary of Trendsutra Platform Services Private Limited.
 
-#Challenges
-Challenges and hardships we faced:
-
-#Tech Stack & #Tools:
+# Challenges :
 During the project, we divided our work among ourselves and we played our part very well.
-Tech & Tools Used :
 
+# Tech Stack & Tools :
 These are the technologies used in this project which are available below with their packages and websites:
 
-Pepperfry Images (From Original Website) https://www.pepperfry.com/
+* [PepperFry](https://www.pepperfry.com/ "home") Images (From Original Website) 
 
-Google Fonts (Font Styles, Font Family)  https://fonts.google.com/
+* [GoogleFonts](https://fonts.google.com/ "home") (Font Styles, Font Family)
 
-For Frontend -HTML5 ,CSS3 ,Javascript , JS6
+* For Frontend -HTML5 ,CSS3 ,Javascript , JS6
 
-For database -Local storage
+* For database -Local storage
 
-Netlify Link :- 
+# Netlify Link :
+
+## Big Thanks..
+#### Thank You [MasaiSchool](https://www.masaischool.com/ "home") 
+
+
+![Thank You](https://i.pinimg.com/originals/6d/cf/b8/6dcfb88b94b8d51496551f27145a829c.gif)
