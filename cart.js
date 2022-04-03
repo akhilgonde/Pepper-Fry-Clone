@@ -3,11 +3,10 @@ var cart = JSON.parse(localStorage.getItem("cart")) || [];
 // Display username
 get_username();
 function get_username() {
-  // let uname = JSON.parse(localStorage.getItem("signupdata"))
-  // console.log('uname:', uname.name)
+  let uname = JSON.parse(localStorage.getItem("userDataBase"));
 
   let tem = document.getElementById("user-name");
-  tem.innerHTML = "Harshada";
+  tem.innerHTML =uname[0].Name;
   // uname.forEach((item) => {
   //     tem.innerText = "WELCOME " + item.name.toUpperCase();
   // })
