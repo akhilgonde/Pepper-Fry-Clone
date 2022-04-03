@@ -27,7 +27,7 @@ These are the technologies used in this project which are available below with t
 * For database -Local storage
 
 # Netlify Link :
-
+[Netlify](https://calm-medovik-173f90.netlify.app/)
 ## Big Thanks..
 #### Thank You [MasaiSchool](https://www.masaischool.com/ "home") 
 
