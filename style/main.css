@@ -445,6 +445,8 @@ h5{
     gap:10px;
     color: #121212;
     font-family: Manrope,sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
    
 }
 #review>div>img+p
@@ -619,7 +621,7 @@ h5{
   {
       font-size: small;
   }
- #footerIndex
+ #footer
  {
      margin-top: 100px;
  }
