@@ -1,5 +1,7 @@
 var cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+let data = JSON.parse(localStorage.getItem("wishData")) || [];
+
 // Display username
 get_username();
 function get_username() {
@@ -205,8 +207,16 @@ cart.forEach(function (el, i) {
     localStorage.setItem("Checkout_Data", JSON.stringify(Checkout_Data));
   });
 
+let data = JSON.parse(localStorage.getItem("wishData")) || [];
   let img2 = document.createElement("img");
   img2.classList = "del";
+  img2.addEventListener("click",function()
+  {
+   data.push(cart[i]);
+
+    localStorage.setItem("wishData", JSON.stringify(data));
+  })
+
   img2.src =
     "https://icon-library.com/images/wish-list-icon/wish-list-icon-1.jpg";
   img2.addEventListener("click", function () {
@@ -216,6 +226,7 @@ cart.forEach(function (el, i) {
     ) {
       img2.src =
         "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png";
+
     } else {
       img2.src =
         "https://icon-library.com/images/wish-list-icon/wish-list-icon-1.jpg";

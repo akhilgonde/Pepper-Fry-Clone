@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wishlist</title>
+    <link rel="stylesheet" href="./cart.css">
     <style>
       #navbar {
         height: 60px;
@@ -34,6 +35,17 @@
         color:orangered;
 
     }
+    .item>div>img
+    {
+      width:100%;
+    height:100%    }
+  #dis
+  {
+    margin: auto;
+    width: 100%;
+    justify-content: space-around;
+  }
+    
     </style>
   </head>
   <body id="bodyT">
@@ -42,7 +54,7 @@
         <h3>MY WISHLIST</h3>
       </div>
 
-      <div>
+      <div id="dis">
             <img src="	https://www.pepperfry.com/images/svg/empty-wishlist.svg" alt="">
             <p>You Haven't Added Any Item To Your wishlist</p>
             <button>START WISHING 😀</button>
@@ -57,4 +69,106 @@
         x.style="zoom: 0.69;,-moz-transform: scale(0.69);"
 
     }
+
+
+    let dataWish = JSON.parse(localStorage.getItem("wishData"));
+
+
+   
+
+displaywish();
+
+    function displaywish()
+    {
+
+
+   if(dataWish.length>0)
+   {
+
+
+    document.getElementById("dis").innerHTML = "";
+    let div1 = document.getElementById("dis");
+let discount = Number(dataWish[0].discount);
+dataWish.forEach(function (el, i) {
+  var count = dataWish[0].quantity;
+  console.log(el);
+
+
+
+  let item = document.createElement("div");
+  item.setAttribute("class", "item");
+
+  //--------------Image-----------------------//
+  let div1A = document.createElement("div");
+  let img = document.createElement("img");
+  img.classList = "pics";
+  img.src = el.image1;
+  div1A.append(img);
+
+  //--------------------Description-------------------//
+  let div1B = document.createElement("div");
+  let div1B1 = document.createElement("div");
+  div1B1.innerText = `${el.name} - ${el.brand}`;
+  let div1B2 = document.createElement("div");
+  div1B2.innerText = "12 Month's Warranty, 100% Genuine";
+  div1B2.style.color = "#f16521";
+  let div1B3 = document.createElement("div");
+  // div1B3.innerText = `Delivery by 8th April.`;
+  div1B3.style.color = "darkgrey";
+
+  div1B.append(div1B1, div1B2, div1B3);
+
+  //-------------------prices-----------------------//
+  let div1C = document.createElement("div");
+
+  let div1C1 = document.createElement("div");
+ 
+  div1C1.style.cursor = "pointer";
+
+ 
+
+  let div1C3 = document.createElement("div");
+
+  div1C3.style.cursor = "pointer";
+
+
+
+  let discount_price = document.createElement("div");
+  discount_price.innerText = `Price ₹ ${Number(el.discount_price)}`;
+  discount_price.style.marginTop = "25%";
+  discount_price.style.color = "#f16521";
+  discount_price.style.fontWeight = 700;
+ 
+
+  let divUP = document.createElement("div");
+  divUP.classList = "quan";
+
+  divUP.append(div1C1,div1C3);
+  div1C.append(divUP, discount_price);
+
+  //...................
+
+  let div1D = document.createElement("button");
+  div1D.innerText = "REMOVE";
+  div1D.style.margin = "auto";
+ 
+  div1D.addEventListener("click", function (i) {
+    
+
+    let existData = JSON.parse(localStorage.getItem("wishData"))
+    item.remove(i);
+
+    existData.splice(i,1)
+window.location.reload();
+    localStorage.setItem("wishData", JSON.stringify(existData));
+
+  });
+
+
+
+  item.append(div1A, div1B, div1C,div1D);
+  div1.append(item);
+});
+   }
+  }
 </script>
