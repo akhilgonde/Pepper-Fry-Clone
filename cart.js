@@ -68,6 +68,7 @@ cart.forEach(function (el, i) {
   //--------------Image-----------------------//
   let div1A = document.createElement("div");
   let img = document.createElement("img");
+  img.style.height="100%";
   img.classList = "pics";
   img.src = el.image1;
   div1A.append(img);
