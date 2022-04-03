@@ -115,7 +115,7 @@ const gotoCart=()=>
 
 const pincodeCheck=()=>
 {
-  let input=document.getElementById("input").value;
+  let input=document.getElementById("Pininput").value;
   if(input.length==6)
   {
     fetch(`https://api.postalpincode.in/pincode/${input}`)

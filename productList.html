@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="footer.css">
+    <script src="index.js" type="module"></script>
   </head>
   <body id="bodyT">
     <div id="navbar">
@@ -23,7 +24,7 @@
    <div id="dropDownNavbar">
     <!-- dropnavbar inported from "./components/header.js" -->
  </div>
-
+    <div style="color: red;text-align: center;"><h4>When you Refresh the page then search data will removed from localStorage</h4></div>
     <div id="container1">
       <div id="left">
         <div id="sortBy">
@@ -105,13 +106,25 @@ let footerIndex = document.getElementById("footer");
 
 footerIndex.innerHTML = footer();
 
+import WholeDB from "./components/WholeDB.js";
+let wholeData=WholeDB();
+
     import Database from "./Database.js";
     import appendDatabase from "./productList.js";
     let x = Database();
     console.log(x); 
     let page=localStorage.getItem("pageInfo");
     // let y=page;
-    if(page=="sofaAndRecliners")
+    let parent = document.getElementById("right");
+  let searchArr=JSON.parse(localStorage.getItem("searchArr"))||[];
+  
+if(searchArr.length>0 && searchArr!=undefined)
+{
+  appendDatabase(searchArr,parent);
+  localStorage.removeItem("searchArr");
+}
+else{
+  if(page=="sofaAndRecliners")
     {
       x=x.sofaAndRecliners;
     }
@@ -138,10 +151,14 @@ footerIndex.innerHTML = footer();
 
     }
 
+     // no sorting
+   
+     appendDatabase(x, parent);
+}
+  
 
-    // no sorting
-    let parent = document.getElementById("right");
-    appendDatabase(x, parent);
+
+   
 
 
     document.querySelector("#res").addEventListener("click", () => {
@@ -404,6 +421,7 @@ footerIndex.innerHTML = footer();
       appendDatabase(data, parent);
      
     })
+ 
 
     document.getElementById("S&R").addEventListener("click",()=>
 {
@@ -440,12 +458,32 @@ document.getElementById("S&R1").addEventListener("click",()=>
     window.location.href="productList.html";
 })
 
-document.getElementById("Mbed1").addEventListener("click",()=>
+document.getElementById("MBed1").addEventListener("click",()=>
 {
    let x= "bed";
     localStorage.setItem("pageInfo",x);
     window.location.href="productList.html";
 })
+
+let input=document.getElementById("search");
+input.addEventListener("keypress",()=>{
+  searchData(event);
+})
+const searchData=(e)=>
+{
+    if(e.keyCode==13)
+   {
+       let inp=input.value;
+        var filterData=wholeData.filter(function(item){
+            return item.name.includes(inp);
+        })
+        localStorage.setItem("searchArr",JSON.stringify(filterData));
+        // appendDatabase(filterData,"right");
+        window.location.href="productList.html";
+   }
+  
+}
+
     if(screen.width==1280)
     {
         let x=document.getElementById("bodyT");
