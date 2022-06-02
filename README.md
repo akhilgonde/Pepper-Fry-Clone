@@ -16,6 +16,8 @@ This is a collaborative Project from Masai School in the Construct Week by FW-16
 # info :
 Firstly let’s know about Pepperfry. It is an Indian online marketplace for furniture and home décor. The company was formed by Ex-eBay executives Ambareesh Murty and Ashish Shah. They started Pepperfry in Mumbai in 2012. The company is headquartered in Mumbai, Maharashtra, and operates as a subsidiary of Trendsutra Platform Services Private Limited.
 
+## Snapshot :
+<img src="https://d1gzz21cah5pzn.cloudfront.net/img/websites/p/pep/pepperfry.com-desktop@2x.1652827704.jpg" style="width:40%;height:90%">
 # Challenges :
 During the project, we divided our work among ourselves and we played our part very well.
 
