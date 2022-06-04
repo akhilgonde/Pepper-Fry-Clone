@@ -33,7 +33,7 @@ These are the technologies used in this project which are available below with t
 * For database -Local storage
 
 # Netlify Link :
-[Netlify](https://calm-medovik-173f90.netlify.app/)
+[Netlify](https://cloneofpeperfry.netlify.app/)
 
 # Blog Link :
 [Medium](https://medium.com/@harshadajagtap199725/clone-of-pepperfry-com-32c061cb366b)
